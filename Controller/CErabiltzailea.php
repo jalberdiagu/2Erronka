@@ -2,7 +2,10 @@
 
 namespace Controller;
 
-class CLogin {
+require_once(__DIR__ . "/../Model/MErabiltzailea.php");
+
+class CErabiltzailea {
+    //Egiaztatu login
     public function egiaztatuLogin() {
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $email = $_POST['email'];
@@ -34,6 +37,24 @@ class CLogin {
             }
             include_once(__DIR__ . "/../Views/Vlogin.php");
         }
+
+        public function insert() {
+            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                if(isset($_POST['email'], $_POST['pasahitza'])) {
+                    $erabiltzailea = $_POST;
+                    
+                    $usuarioModel = new \Model\MErabiltzailea();
+                    
+                    if($usuarioModel->insertErab($erabiltzailea)) {
+                        echo "<div class='alert alert-success'>Ondo sortu da erabiltzaile berria!</div>";
+                    } else {
+                        echo "<div class='alert alert-danger'>ERROREA: Ezin da sortu sortuta dagoen erabiltzaile bat!</div>";
+                    }
+                }
+            }
+            include_once(__DIR__ . "/../Views/VsortuErabiltzailea.php");
+        }
+
 }//Klasearen amaiera
 
 ?>
