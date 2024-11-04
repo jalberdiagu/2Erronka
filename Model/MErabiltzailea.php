@@ -4,6 +4,20 @@ require_once "Konexioa.php";
 
 class MErabiltzailea extends Konexioa {
 
+    //Erabiltzailea egiaztatu
+    public function login($email, $pasahitza) {
+        $stmt = $this->getKon()->prepare("SELECT * FROM erabiltzaileak WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $user = $result->fetch_assoc();
+    
+        if ($user && $pasahitza === $user['pasahitza']) {
+            return $user;
+        }
+        return false;
+    }
+
     public function getErab($id_erab){
         $erab = null;
         $sententzia =$this->getKon()->prepare("SELECT * FROM erabiltzaileak WHERE id_erab = ?");
