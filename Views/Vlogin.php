@@ -22,7 +22,7 @@
             </div>
             <div class="d-flex justify-content-start mb-3">
                 <p class="me-2">Ez duzu konturik sortuta?</p>
-                <a href="VsortuErabiltzailea.html">Sortu erabiltzailea</a>
+                <a href="VsortuErabiltzailea.php">Sortu erabiltzailea</a>
             </div>
             <div class="d-flex justify-content-center">
                 <button type="reset" class="btn btn-secondary me-2">Ezabatu</button>

@@ -26,7 +26,7 @@ class CErabiltzailea {
                         $_SESSION['user'] = $erab;
                         
         
-                        if ($erab['admin'] == '****') {
+                        if ($erab['admin'] == '1') {
                             header('Location: ');
                         } else {
                             header('Location: ');

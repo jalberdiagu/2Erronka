@@ -4,37 +4,36 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e9ecef;
+    background-color: #c47b3b;
 }
 
 .login-container {
     width: 860px; 
+    max-width: 100%; /* Asegura que se ajuste en pantallas pequeñas */
     height: 400px;
     padding: 30px;
     justify-items: center;
-    background-color: #f8f9fa;
     border: 1px solid #dee2e6;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-20%);
+    background-color: rgb(255, 255, 255); 
 }
 
 @media (max-width: 992px) {
     .login-container {
-        width: 550px; 
-        padding: 25px; 
+        width: 450px; /* Ajusta el ancho en pantallas medianas */
         height: auto; 
+        padding: 25px; 
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     }
 }
-
 
 @media (max-width: 576px) {
     .login-container {
         width: 90%; 
         padding: 20px;
-        height: 85vh; 
-        max-height: 600px; 
+        height: auto; 
+        max-height: 85vh; /* Mantiene una altura máxima */
         margin: auto;
         display: flex;
         flex-direction: column;
