@@ -8,7 +8,7 @@ class MOrgatxoa extends Konexioa {
         $orga =[];
         $sententzia = $this->getKon()->prepare("SELECT * FROM orgatxoa WHERE id_erab = ?");
 
-        $sententzia->bind_param("i", $idOrga);
+        $sententzia->bind_param("i", $idErab);
         $sententzia->execute();
         $emaitza = $sententzia->get_result();
 

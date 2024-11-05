@@ -5,4 +5,4 @@ $vista= new VPPrincipal();
 $vista->initHTML();
 $vista->navbar();
 $vista->carousel_hot();
-$vista->end
+$vista->endHTML();

@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<? 
+require_once __DIR__ . '/Vista.php';
+class VErabiltzailea extends Vista{
+public function formErabiltzailea(){ ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,3 +48,5 @@
 <script src="js/sortuErabiltzailea.js"></script>
 </body>
 </html>
+<? }
+}

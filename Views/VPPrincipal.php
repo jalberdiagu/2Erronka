@@ -6,17 +6,23 @@ class VPPrincipal extends Vista
     public function navbar()
     { ?>
         <!-- NAVBAR -->
-        <nav id="navbar">
-            <a class="logo" href="./index.html">
-                <img src="../img/logo.png" alt="" />
-                <span>Liburuen Orgatxoa</span>
-            </a>
-            <ul class="links">
-                <div class="separadorBorde"></div>
-                <li><a href="./indexDestinos.html">Destinos</a></li>
-                <li><a href="./actividades.html">Actividades</a></li>
-            </ul>
-        </nav>
+        <header>
+            <span class="logo_wrap">
+                <a href="index.php">
+                    <img src="Views/img/logo.jpg" alt="Liburuen Orgatxoa Logo">
+                </a>
+            </span>
+            <nav>
+                <span id="hamburger_menu">
+                    <span id="bar"></span>
+                </span>
+                <ul>
+                    <li><a href="">PRODUKTUAK</a></li>
+                    <li><a href="z">AGINDUAK</a></li>
+                    <li><a href="Views/Vlogin.php"><i class="bi bi-person fs-5"></i></a></li>
+                </ul>
+            </nav>
+        </header>
     <? }
     public function carousel_hot()
     { ?>
@@ -167,6 +173,25 @@ class VPPrincipal extends Vista
         </div>
         <!-- END CAROUSEL -->
 
+    <? }
+
+    public function footer()
+    { ?>
+        <footer>
+            <span class="logo_wrap">
+                <a href="#">
+                    <img src="Views/img/logo.jpg" class="logo-sm" alt="Liburuen Orgatxoa Logo">
+                </a>
+            </span>
+            <nav>
+                <ul>
+                    <li><a href="https://www.tiktok.com/es/"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="https://www.instagram.com/?hl=es"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a></li>
+                </ul>
+            </nav>
+            <p>Irudi guztiek CC BY-NC 4.0 eta CC BY 2.0 lizentziak dituzte.</p>
+        </footer>
     <? }
 
 }
