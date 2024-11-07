@@ -3,6 +3,7 @@
 namespace Controller;
 
 require_once(__DIR__ . "/../Model/MErabiltzailea.php");
+require_once("/../Model/Konexioa.php");
 
 class CErabiltzailea {
     //Egiaztatu login
@@ -26,9 +27,9 @@ class CErabiltzailea {
                         $_SESSION['user'] = $erab;
         
                         if ($erab['admin'] == '1') {
-                            header('Location: ');
+                            header('Location: index.php?action=loginAdmin');
                         } else {
-                            header('Location: ');
+                            header('Location: index.php?action=loginClient');
                         }
                         exit;
                     }

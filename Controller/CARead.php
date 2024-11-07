@@ -9,4 +9,19 @@ if($data!==""){
     $query->execute();
 }
 $erantzuna = $query->fetchAll(PDO::FETCH_ASSOC);
-echo json_encode($erantzuna);
+
+foreach ($erantzuna as $data) {
+    echo "<tr>
+            <td>" . $data['id_erab'] . "</td>
+            <td>" . $data['izena'] . "</td>
+            <td>" . $data['abizena'] . "</td>
+            <td>" . $data['email'] . "</td>
+            <td>" . $data['pasahitza'] . "</td>
+            <td>" . $data['rola'] . "</td>
+            <td>
+                <button type='button' class='btn btn-success' onclick=editar('" . $data['id_erab'] . "')>Editar</button>
+                <button type='button' class='btn btn-danger' onclick=eliminar('" . $data['id_erab'] . "')>Eliminar</button>
+            </td>        
+        </tr>";
+}
+// echo json_encode($erantzuna);

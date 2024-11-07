@@ -15,7 +15,8 @@ if(isset($_POST)){
         $query->bindParam(":pas", $pasahitza);
         $query->bindParam(":rol", $rola);
         $query->execute();
-        $pdo = null;
+        // $pdo = null;
+        echo "insert";
     }else{
         $id = $_POST["id_erab"];
         $query = $pdo->prepare("UPDATE erabiltzaileak SET izena= :iz ,abizena= :ab ,email= :em ,pasahitza= :pas ,rola= :rol WHERE id_erab= :id");
@@ -25,6 +26,7 @@ if(isset($_POST)){
         $query->bindParam(":pas", $pasahitza);
         $query->bindParam(":rol", $rola);
         $query->bindParam(":id", $id);
-        $pdo= null;
+        // $pdo= null;
+        echo "update";
     }
 }

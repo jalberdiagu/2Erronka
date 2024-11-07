@@ -13,6 +13,12 @@ class MEskaeren_xehetasunak extends konexioa {
         $statement->close();
     }
 
+    public function deleteEskaerarenXehetasunak($id_xehe) {
+        $statement = $this->getKon()->prepare("DELETE FROM eskaeren_xehetasunak WHERE id_xehe = ?");
+        $statement->bind_param("i", $id_xehe);
+        return $statement->execute();    
+    }
+
 }//Klasearen amaiera
 
 ?>

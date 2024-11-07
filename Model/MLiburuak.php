@@ -16,11 +16,11 @@ class MLiburuak extends Konexioa{
         return $libros;
     }
 
-    public function getLiburua($libro){
+    public function getLiburua($book){
         $libro = null;
         $sentencia = $this->getKon()->prepare("SELECT * FROM liburuak WHERE izenburua = ?");
 
-        $sentencia->bind_param("s", $libro);
+        $sentencia->bind_param("s", $book);
 
         $sentencia->execute();
 
@@ -35,6 +35,31 @@ class MLiburuak extends Konexioa{
         return $libro;
     }  
 
-}//Klasearen amaiera
+    public function getLiburuakHOT(){
+        
+        $sentencia = $this->getKon()->query('SELECT * FROM liburuak WHERE tag = "HOT"');
+
+        $libros=[];
+
+        while ($fila = $sentencia->fetch_assoc()) {
+            $libros[] = $fila;
+        }
+        return $libros;
+    }  
+
+
+    public function getLiburuakNEW(){
+        
+        $sentencia = $this->getKon()->query('SELECT * FROM liburuak WHERE tag = "NEW"');
+
+        $libros=[];
+
+        while ($fila = $sentencia->fetch_assoc()) {
+            $libros[] = $fila;
+        }
+        return $libros;
+    }
+
+}
 
 ?>

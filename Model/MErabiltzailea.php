@@ -69,5 +69,4 @@ class MErabiltzailea extends Konexioa {
         $sententzia->execute();
         $sententzia->close();
     }
-}
-//Klasearen amaiera
+}//Klasearen amaiera

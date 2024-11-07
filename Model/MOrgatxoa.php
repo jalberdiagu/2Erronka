@@ -32,5 +32,6 @@ class MOrgatxoa extends Konexioa {
         $sententzia->execute();
         $sententzia->close();
     }
+    
 
 }

@@ -1,3 +1,12 @@
+<?php
+
+require_once(__DIR__ . "/Controller/CErabiltzailea.php");
+
+$loginController = new Controller\CErabiltzailea();
+$loginController->egiaztatuLogin();
+
+?>
+
 <!DOCTYPE html>
 <html lang="eu">
 
