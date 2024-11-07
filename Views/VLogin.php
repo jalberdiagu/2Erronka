@@ -15,7 +15,7 @@ class VLogin extends Vista{
         <body class="d-flex justify-content-center align-items-center min-vh-100">
             <div class="login-container">
                 <h1 class="text-center mb-4">SAIOA HASI</h1>
-                <form action="" method="POST">
+                <form action="index.php?action=login" method="POST">
                     <div class="mb-3">
                         <label for="email" class="form-label"><b>Posta elektronikoa:</b></label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Idatzi zure posta elektronikoa..." required>

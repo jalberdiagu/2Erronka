@@ -17,11 +17,34 @@ class Vista
                 integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-            <link rel="stylesheet" href="css/global.css">
+            <link rel="stylesheet" href="/Views/css/global.css">
         </head>
 
         <body>
-        <?php }
+        <?php 
+    }
+
+    public function navbar()
+    { ?>
+        <!-- NAVBAR -->
+        <header>
+            <span class="logo_wrap">
+                <a href="index.php">
+                    <img src="Views/img/logo.jpg" alt="Liburuen Orgatxoa Logo">
+                </a>
+            </span>
+            <nav>
+                <span id="hamburger_menu">
+                    <span id="bar"></span>
+                </span>
+                <ul>
+                    <li><a href="">PRODUKTUAK</a></li>
+                    <li><a href="z">AGINDUAK</a></li>
+                    <li><a href="Views/Vlogin.php"><i class="bi bi-person fs-5"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+    <?php }
 
     public function endHTML()
     { ?>

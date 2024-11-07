@@ -5,27 +5,7 @@ require_once __DIR__ . '/Vista.php';
 class VPPrincipal extends Vista
 {
 
-    public function navbar()
-    { ?>
-        <!-- NAVBAR -->
-        <header>
-            <span class="logo_wrap">
-                <a href="index.php">
-                    <img src="Views/img/logo.jpg" alt="Liburuen Orgatxoa Logo">
-                </a>
-            </span>
-            <nav>
-                <span id="hamburger_menu">
-                    <span id="bar"></span>
-                </span>
-                <ul>
-                    <li><a href="">PRODUKTUAK</a></li>
-                    <li><a href="z">AGINDUAK</a></li>
-                    <li><a href="Views/Vlogin.php"><i class="bi bi-person fs-5"></i></a></li>
-                </ul>
-            </nav>
-        </header>
-    <?php }
+    
     public function carousel_hot($libros)
     { ?>
 

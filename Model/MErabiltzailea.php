@@ -1,10 +1,9 @@
 <?php
 namespace Model;
-require_once "Konexioa.php";
+require_once (__DIR__ . "/../Model/Konexioa.php");
 
 class MErabiltzailea extends Konexioa {
 
-    //Erabiltzailea egiaztatu
     public function login($email, $pasahitza) {
         $stmt = $this->getKon()->prepare("SELECT * FROM erabiltzaileak WHERE email = ?");
         $stmt->bind_param("s", $email);
@@ -12,7 +11,7 @@ class MErabiltzailea extends Konexioa {
         $result = $stmt->get_result();
         $user = $result->fetch_assoc();
     
-        if ($user && $pasahitza === $user['pasahitza']) {
+        if ($user && password_verify($pasahitza, $user['pasahitza'])) {
             return $user;
         }
         return false;
