@@ -38,16 +38,16 @@ class MErabiltzailea extends Konexioa {
     public function getErabk(){
         $query = $this->getKon()->query("SELECT * FROM erabiltzaileak");
         
-        $erabiltzaileak = [];
+        $erabk = [];
         while($lerroa = $query->fetch_assoc()){
-            $erabiltzaileak[] = $lerroa;
+            $erabk[] = $lerroa;
         }
-        return $erabiltzaileak;
+        return $erabk;
     }
 
-    public function insertErab($erabiltzailea){
+    public function insertErab($erab){
         $sententzia = $this->getKon()->prepare("INSERT INTO erabiltzaileak(izena, abizena, email, pasahitza, rola) VALUES (?,?,?,?,?) ");
-        $sententzia->bind_param("ssssi",$erabiltzailea["izena"], $erabiltzailea["abizena"], $erabiltzailea["email"], $erabiltzailea["pasahitza"], $erabiltzailea["rola"]);
+        $sententzia->bind_param("ssssi",$erab["izena"], $erab["abizena"], $erab["email"], $erab["pasahitza"], $erab["rola"]);
 
         $sententzia->execute();
         $sententzia->close();
