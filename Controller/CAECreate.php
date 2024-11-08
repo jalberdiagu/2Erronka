@@ -6,7 +6,7 @@ if(isset($_POST)){
     $pasahitza = $_POST["pasahitza"];
     $rola = $_POST["rola"];
 
-    require_once("/../Model/Konexioa.php");
+    require_once("/../Konexioaa.php");
     if(empty($_POST['id_erab'])){
         $query = $pdo->prepare('INSERT INTO erabiltzaileak(izena, abizena, email, pasahitza, rola) VALUES (:iz, :ab, :em, :pas, :rol)');
         $query->bindParam(":iz", $izena);

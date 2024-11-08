@@ -1,5 +1,5 @@
 <?php 
-require_once("Konexioa.php");
+require_once("/../Konexioaa.php");
 
 $data = file_get_contents("php://input");
 require_once("/../Model/Konexioa.php");

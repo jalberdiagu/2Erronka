@@ -1,6 +1,6 @@
 <?php
 $data = file_get_contents("php://input");
-require_once("/../Model/Konexioa.php");
+require_once("/../Konexioaa.php");
 $query = $pdo->prepare("SELECT * FROM erabiltzaileak ORDER BY id_erab ASC");
 $query->execute();
 
