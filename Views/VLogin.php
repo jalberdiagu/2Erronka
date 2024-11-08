@@ -1,8 +1,4 @@
-<?php
-require_once __DIR__ . '/Vista.php';
-class VLogin extends Vista{ 
-    public function login(){ ?>
-        <!DOCTYPE html>
+<!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -38,5 +34,5 @@ class VLogin extends Vista{
         <script src="js/login.js"></script>
         </body>
         </html>
-<? }
-}
+<? 
+
