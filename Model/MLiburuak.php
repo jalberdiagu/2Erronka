@@ -16,6 +16,25 @@ class MLiburuak extends Konexioa{
         return $libros;
     }
 
+    public function getLiburuaIdaz($writer){
+        $libros = null;
+        $sentencia = $this->getKon()->prepare("SELECT * FROM liburuak WHERE idazlea = ?");
+
+        $sentencia->bind_param("s", $writer);
+
+        $sentencia->execute();
+
+        $resultado = $sentencia->get_result();
+
+        if ($fila = $resultado->fetch_assoc()) {
+            $libros = $fila;
+        }
+
+        $sentencia->close();
+
+        return $libros;
+    }  
+
     public function getLiburua($book){
         $libro = null;
         $sentencia = $this->getKon()->prepare("SELECT * FROM liburuak WHERE izenburua = ?");
@@ -34,6 +53,7 @@ class MLiburuak extends Konexioa{
 
         return $libro;
     }  
+ 
 
     public function getLiburuakHOT(){
         

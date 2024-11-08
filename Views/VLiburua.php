@@ -14,7 +14,9 @@ class VLiburua extends Vista
             </div>
             <div id="texto">
                 <h1><?= $libro["izenburua"]; ?></h1>
-                <h2><a href="#"><?= $libro["idazlea"]; ?></a></h2>
+                <h2><a href='CLiburuak.php?writer=<?php
+                                $libro["idazlea"];
+                                    ?>'>><?= $libro["idazlea"]; ?></a></h2>
                 <p><?= $libro["argitaletxea"]; ?> - <?= $libro["isbn"]; ?></p>
                 <p><?= $libro["deskripzioa"]; ?></p>
             </div>
@@ -23,4 +25,4 @@ class VLiburua extends Vista
     <?php }
 
 
-}
+}?>
