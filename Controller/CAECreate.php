@@ -11,11 +11,14 @@ if(isset($_POST)){
 
     if(empty($_POST['id_erab'])){
         $con = new Model\MAErabiltzailea();
-        $con->createErab($izena, $abizena, $email, $pasahitza, $rola);
-        echo "insert";
+        if($con->createErab($izena, $abizena, $email, $pasahitza, $rola)){ 
+            echo "insert";
+        }else{echo "errorea";}
+       
     }else{
         $con = new Model\MAErabiltzailea();
-        $con->updateErab($izena, $abizena, $email, $pasahitza, $rola, $id_erab);
+        if($con->updateErab($izena, $abizena, $email, $pasahitza, $rola, $id_erab)){
         echo "update";
+        }else{echo "errorea";}
     }
 }
