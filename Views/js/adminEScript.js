@@ -51,7 +51,7 @@ function erabkEzabatu(id_erab){
         cancelButtonText: 'NO'
     }).then((result) => {
         if(result.isConfirmed){
-            fetch("CAEDelete.php", {
+            fetch("/2Erronka/Controller/CAEDelete.php", {
                 method:"POST",
                 body: id_erab
             }).then(response => response.text()).then(response => {
