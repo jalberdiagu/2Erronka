@@ -14,7 +14,7 @@
             <i class="bi bi-arrow-left-circle-fill"></i>
         </a>
         <h1 class="text-center mb-4">SAIOA HASI</h1>
-        <form action="/Controller/CErabiltzailea.php" method="POST">
+        <form action="/2Erronka/Controller/CErabiltzailea.php" method="POST">
             <div class="mb-3">
                 <label for="email" class="form-label"><b>Posta elektronikoa:</b></label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Idatzi zure posta elektronikoa..." required>
@@ -25,7 +25,7 @@
             </div>
             <div class="d-flex justify-content-start mb-3">
                 <p class="me-2">Ez duzu konturik sortuta?</p>
-                <a href="VAdmin.php">Sortu erabiltzailea</a>
+                <a href="VsortuErabiltzailea.php">Sortu erabiltzailea</a>
             </div>
             <div class="d-flex justify-content-center">
                 <button type="reset" class="btn btn-secondary me-2">Ezabatu</button>
