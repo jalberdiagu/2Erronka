@@ -22,13 +22,17 @@ class MAErabiltzailea extends Konexioa{
     }
 
     public function createErab($izena, $abizena, $email, $pasahitza, $rola){
-        $query = $this->getKon()->prepare('INSERT INTO erabiltzaileak(izena, abizena, email, pasahitza, rola) VALUES (:iz, :ab, :em, :pas, :rol)');
-        $query->bind_param(":iz", $izena);
-        $query->bind_param(":ab", $abizena);
-        $query->bind_param(":em", $email);
-        $query->bind_param(":pas", $pasahitza);
-        $query->bind_param(":rol", $rola);
+        $query = $this->getKon()->prepare('INSERT INTO erabiltzaileak(izena, abizena, email, pasahitza, rola) VALUES (?, ?, ?, ?, ?)');
+        $query->bind_param("ssssi", $izena, $abizena, $email, $pasahitza, $rola);
         $query->execute();
         }
+        public function updateErab($izena, $abizena, $email, $pasahitza, $rola, $id_erab){
+            $query = $this->getKon()->prepare("UPDATE erabiltzaileak SET izena= ? ,abizena= ? ,email= ? ,pasahitza= ? ,rola= ? WHERE id_erab= ?");
+        $query->bind_param("ssssii", $izena, $abizena, $email, $pasahitza, $rola, $id_erab);
+        $query->execute();
+        }
+    public function updateSelect($data){
+        $query = $this->getKon()->prepare("SELECT * FROM erabiltzaileak WHERE id_erab = :id");
+    }
     
 }

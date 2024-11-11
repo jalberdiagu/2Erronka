@@ -27,8 +27,8 @@ class VPPrincipal extends Vista
                                     <p class="card-text"><?= $libro["idazlea"]; ?></p>
                                     <p class="card-text"><?= $libro["generoa"]; ?></p>
                                     <p class="card-text"><?= $libro["prezioa"]; ?>€</p>
-                                    <a href='CLiburua.php?book=<?php
-                                $libro["izenburua"];
+                                    <a href='CLiburua.php?book=<?=
+                                        $libro["izenburua"];
                                     ?>' class="btn btn-primary">Ikusi Liburua</a>
                                 </div>
                             </div>
@@ -63,7 +63,7 @@ class VPPrincipal extends Vista
                     <?php
                     foreach ($libros as $libro) { ?>
                         <div class="carousel-item ">
-                        <div class="card">
+                            <div class="card">
                                 <div class="img-wrapper">
                                     <img id="imgCarousel" src='<?= $libro["argazkia"]; ?>' alt="...">
                                 </div>
@@ -73,7 +73,9 @@ class VPPrincipal extends Vista
                                     <p class="card-text"><?= $libro["idazlea"]; ?></p>
                                     <p class="card-text"><?= $libro["generoa"]; ?></p>
                                     <p class="card-text"><?= $libro["prezioa"]; ?>€</p>
-                                    <a href="#" class="btn btn-primary">Ikusi Liburua</a>
+                                    <a href='CLiburua.php?book=<?=
+                                        $libro["izenburua"];
+                                    ?>' class="btn btn-primary">Ikusi Liburua</a>
                                 </div>
                             </div>
                         </div>

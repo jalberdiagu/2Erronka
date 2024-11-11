@@ -41,7 +41,7 @@ class Vista
                     <ul>
                         <li><a href="">PRODUKTUAK</a></li>
                         <li><a href="z">AGINDUAK</a></li>
-                        <li><a href="Views/Vlogin.php"><i class="bi bi-person fs-5"></i></a></li>
+                        <li><a href="http://localhost/2Erronka/Views/Vlogin.php"><i class="bi bi-person fs-5"></i></a></li>
                     </ul>
                 </nav>
             </header>
