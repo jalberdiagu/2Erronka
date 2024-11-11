@@ -1,54 +1,140 @@
+/* Estilos generales */
 body, html {
     height: 100%;
     margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #7e4d22;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #7e4d22; 
 }
 
 .login-container {
-    width: 860px; 
-    max-width: 100%; 
-    height: 400px;
-    padding: 30px;
-    border: 1px solid #dee2e6;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    background-color: rgb(255, 255, 255); 
-    position: relative;
+    width: 850px; 
+    height: 400px; 
+    padding: 40px; 
+    background-color: #ffffff; 
+    border-radius: 15px; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+}
+
+h1 {
+    font-size: 1.5rem; 
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .back-arrow {
     position: absolute;
     top: 10px;
-    left: 10px; 
+    left: 10px;
     font-size: 1.5rem;
     color: #333;
     text-decoration: none;
 }
+
 .back-arrow:hover {
     color: #007bff;
 }
 
-@media (max-width: 992px) {
+/* Responsividad */
+@media (max-width: 1024px) {
     .login-container {
-        width: 450px; 
+        width: 75%;  
+        max-width: 700px; 
+        padding: 35px; 
         height: auto; 
-        padding: 25px; 
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 85%;  
+        max-width: 600px; 
+        padding: 30px; 
+        height: auto; 
     }
 }
 
 @media (max-width: 576px) {
     .login-container {
-        width: 90%; 
-        padding: 20px;
+        width: 90%;  
+        max-width: 500px; 
+        padding: 25px;
         height: auto; 
-        max-height: 85vh; 
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
+}
+
+@media (max-width: 400px) {
+    .login-container {
+        width: 95%;  
+        max-width: 400px; 
+        padding: 20px; 
+    }
+}
+
+.form-label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da; /* Gris claro para los inputs */
+}
+
+.input-group-text {
+    background-color: #6c757d; /* Gris oscuro para los iconos */
+    color: white;
+    border: 1px solid #ced4da; /* Borde gris claro */
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.5); /* Resaltado azul al hacer focus */
+}
+
+.btn-secondary {
+    background-color: #dc3545; 
+    border-color: #dc3545;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.btn-secondary:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.mb-3 {
+    margin-bottom: 1rem; 
+}
+
+/* Estilo para los iconos dentro de los inputs */
+.input-group-text i {
+    font-size: 1.2rem;
+}
+
+/* Estilo de la fila de enlace */
+.d-flex a {
+    color: #007bff;
+}
+
+.d-flex a:hover {
+    text-decoration: underline;
 }

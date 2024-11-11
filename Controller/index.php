@@ -5,22 +5,18 @@ require_once(__DIR__ . '/CErabiltzailea.php');
 
 use Controller\CErabiltzailea;
 
-// Crear una instancia del controlador
 $controller = new CErabiltzailea();
 
-// Verificar si se ha pasado una acción en la URL
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
     
-    // Comprobar si el método existe en el controlador
     if (method_exists($controller, $action)) {
         $controller->$action();
-        exit(); // Salir después de ejecutar la acción
+        exit(); 
     } else {
         echo "<div class='alert alert-danger'>Ekintza hori ez da aurkitu!</div>";
     }
 } else {
-    // Cargar la vista principal si no hay acción especificada
     $con = new Model\MLiburuak();
     $librosHot = $con->getLiburuakHOT();
     $librosNew = $con->getLiburuakNEW();
