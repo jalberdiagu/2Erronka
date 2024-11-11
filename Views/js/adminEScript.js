@@ -16,7 +16,7 @@ erregistratu.addEventListener("click", () => {
         body: new FormData(frm)
     }).then(response => response.json()).then(response => {
         console.log("response:" + response.tipo);
-        if(response == "insert"){
+        if(response.tipo == "insert"){
             Swal.fire({
                 icon: 'success',
                 title: 'Erregistratuta',
@@ -25,7 +25,7 @@ erregistratu.addEventListener("click", () => {
             })
             frm.reset();
             erabkBistaratu();
-        }else if(response == "update"){
+        }else if(response.tipo == "update"){
             Swal.fire({
                 icon: 'success',
                 title: 'Aldatuta',
