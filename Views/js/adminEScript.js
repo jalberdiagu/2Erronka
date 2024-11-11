@@ -2,11 +2,7 @@
 erabkBistaratu();
 
 function erabkBistaratu(bilaketa){
-<<<<<<< HEAD
     fetch("/2Erronka/Controller/CAERead.php", {
-=======
-    fetch("CAERead.php", {
->>>>>>> 6a3abe19c91f8f5781adac06a1cf96cf4fb02c5a
         method:"POST",
         body: bilaketa
     }).then(response => response.text()).then(response => {
@@ -15,7 +11,7 @@ function erabkBistaratu(bilaketa){
 }
 
 erregistratu.addEventListener("click", () => {
-    fetch("CAECreate.php", {
+    fetch("/2Erronka/Controller/CAECreate.php", {
         method: "POST",
         body: new FormData(frm)
     }).then(response => response.text()).then(response => {
@@ -54,7 +50,7 @@ function erabkEzabatu(id_erab){
         cancelButtonText: 'NO'
     }).then((result) => {
         if(result.isConfirmed){
-            fetch("CAEDelete.php", {
+            fetch("/2Erronka/Controller/CAEDelete.php", {
                 method:"POST",
                 body: id_erab
             }).then(response => response.text()).then(response => {
@@ -73,7 +69,7 @@ function erabkEzabatu(id_erab){
 }
 
 function erabkAldatu(id_erab){
-    fetch("CAEUpdate.php", {
+    fetch("/2Erronka/Controller/CAEUpdate.php", {
         method:"POST", 
         body: id_erab
     }).then(response => response.json()).then(response => {
