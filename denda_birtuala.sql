@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2024 a las 12:31:00
+-- Tiempo de generación: 11-11-2024 a las 12:43:21
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -55,7 +55,10 @@ CREATE TABLE `erabiltzaileak` (
 
 INSERT INTO `erabiltzaileak` (`id_erab`, `izena`, `abizena`, `email`, `pasahitza`, `rola`) VALUES
 (1, 'Jon', 'Alberdi', 'jon@gmail.com', '12345', 1),
-(2, 'Ane', 'Goikuria', 'ane@gmail.com', '678910', 0);
+(2, 'Ane', 'Goikuria', 'ane@gmail.com', '678910', 0),
+(3, 'Jon', 'Stanton', 'stanton11@gmail.com', '666', 1),
+(4, 'Anton', 'Tshans', 'anton@gmail.com', '999', 1),
+(5, 'Ibai', 'Amo', 'Amo23@gmail.com', '1234', 0);
 
 -- --------------------------------------------------------
 
@@ -203,7 +206,7 @@ ALTER TABLE `deskontuak`
 -- AUTO_INCREMENT de la tabla `erabiltzaileak`
 --
 ALTER TABLE `erabiltzaileak`
-  MODIFY `id_erab` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_erab` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `eskaerak`

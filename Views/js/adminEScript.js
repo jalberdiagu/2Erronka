@@ -2,7 +2,7 @@
 erabkBistaratu();
 
 function erabkBistaratu(bilaketa){
-    fetch("CARead.php", {
+    fetch("/2Erronka/Controller/CAERead.php", {
         method:"POST",
         body: bilaketa
     }).then(response => response.text()).then(response => {

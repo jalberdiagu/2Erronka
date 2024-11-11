@@ -4,7 +4,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #c47b3b;
+    background-color: #7e4d22;
 }
 
 .login-container {
@@ -12,11 +12,23 @@ body, html {
     max-width: 100%; 
     height: 400px;
     padding: 30px;
-    justify-items: center;
     border: 1px solid #dee2e6;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     background-color: rgb(255, 255, 255); 
+    position: relative;
+}
+
+.back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px; 
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+}
+.back-arrow:hover {
+    color: #007bff;
 }
 
 @media (max-width: 992px) {
