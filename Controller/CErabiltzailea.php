@@ -20,19 +20,21 @@ class CErabiltzailea {
                 if ($erab) {
                     $_SESSION['user'] = $erab;
                     
-                    if ($erab['admin'] == '1') {
-                        header('Location: index.php?action=loginAdmin');
+                    if ($erab['rola'] == '1') {
+                        header('Location: /Views/VAdmin.php'); 
+                    } elseif ($erab['rola'] == '0') {
+                        header('Location: /Controller/index.php'); 
                     } else {
-                        header('Location: index.php?action=loginClient');
+                        echo "<div class='alert alert-danger text-center'>Errorea: Ezin da identifikatu erabiltzaile mota.</div>";
                     }
-                    exit;
+                    exit();
                 } else {
-                    echo "<div class='alert alert-danger text-center'>Email edo pasahitza ez dira zuzenak!</div>";
+                    echo "<div class='alert alert-danger text-center'>Email edo pasahitza okerra.</div>";
                 }
             }
         }
-        include_once(__DIR__ . "/../Views/VLogin.php");
     }
+
 
     public function insert() {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {

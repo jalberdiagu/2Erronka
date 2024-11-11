@@ -80,6 +80,12 @@ class MLiburuak extends Konexioa{
         return $libros;
     }
 
+    public function deleteLiburua($id_prod) {
+        $statement = $this->getKon()->prepare("DELETE FROM liburuak WHERE id_prod = ?");
+        $statement->bind_param("i", $id_prod);
+        return $statement->execute();
+    }
+
 }
 
 ?>

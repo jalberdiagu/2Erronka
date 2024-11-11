@@ -2,7 +2,7 @@
 require(__DIR__. '/../Views/VLiburua.php');
 require(__DIR__. '/../Model/MLiburuak.php');
 
-$book=$_GET['izenburua'];
+$book=$_GET['book'];
 
 $con = new Model\MLiburuak();
 $libroGet = $con->getLiburua($book);

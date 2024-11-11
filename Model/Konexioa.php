@@ -6,7 +6,7 @@ class Konexioa{
 
     public function __construct(){
         $this->kon = new \mysqli("localhost", "root", "", "denda_birtuala");
-
+                    
         if ($this->kon->connect_error) {
             die("Erronea konexioan: " . $this->kon->connect_error);
         }

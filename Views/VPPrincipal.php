@@ -5,44 +5,49 @@ require_once __DIR__ . '/Vista.php';
 class VPPrincipal extends Vista
 {
 
-    
+
     public function carousel_hot($libros)
     { ?>
 
         <div id="libros_hot">
             <h1>HOT!</h1>
-            <div class="owl-carousel owl-theme">
-                <?php
-                foreach ($libros as $libro) {
-                    ?>
-                    <div class="carousel-item">
-                        <a href="CLiburua.php?book=<?php
-                                $libro["izenburua"];
-                                    ?>">
-                            <div class="carousel-item-image">
-                                <img src="<?php
-                                echo $libro["argazkia"];
-                                    ?>" class="item-image">
-                            </div>
-                            <div class="carousel-item-text">
-                                <span class="item-kicker">
-                                    <?php
-                                    echo $libro["idazlea"];
-                                        ?>
-                                </span>
-                                <h3 class="item-title">
-                                    <?php
-                                    echo $libro["izenburua"];
-                                        ?>
-                                </h3>
-                            </div>
-                        </a>
-                    </div>
-                <?php }
+            <div id="carouselExample1" class="carousel">
+                <div class="carousel-inner">
 
-                ?>
+                    <?php
+                    foreach ($libros as $libro) { ?>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="img-wrapper">
+                                    <img id="imgCarousel" src='<?= $libro["argazkia"]; ?>' alt="...">
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title"><?= $libro["izenburua"]; ?></h5>
+                                    <p class="card-text"><?= $libro["idazlea"]; ?></p>
+                                    <p class="card-text"><?= $libro["generoa"]; ?></p>
+                                    <p class="card-text"><?= $libro["prezioa"]; ?>€</p>
+                                    <a href='CLiburua.php?book=<?php
+                                $libro["izenburua"];
+                                    ?>' class="btn btn-primary">Ikusi Liburua</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php }
+                    ?>
+
+                </div>
             </div>
-            <!-- END CAROUSEL -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- END CAROUSEL -->
         </div>
     <?php }
 
@@ -52,56 +57,42 @@ class VPPrincipal extends Vista
 
         <div id="libros_new">
             <h1>BERRIAK!</h1>
-            <div class="owl-carousel owl-theme">
-                <?php
-                foreach ($libros as $libro) {
+            <div id="carouselExample2" class="carousel slide">
+                <div class="carousel-inner">
+
+                    <?php
+                    foreach ($libros as $libro) { ?>
+                        <div class="carousel-item ">
+                        <div class="card">
+                                <div class="img-wrapper">
+                                    <img id="imgCarousel" src='<?= $libro["argazkia"]; ?>' alt="...">
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title"><?= $libro["izenburua"]; ?></h5>
+                                    <p class="card-text"><?= $libro["idazlea"]; ?></p>
+                                    <p class="card-text"><?= $libro["generoa"]; ?></p>
+                                    <p class="card-text"><?= $libro["prezioa"]; ?>€</p>
+                                    <a href="#" class="btn btn-primary">Ikusi Liburua</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php }
                     ?>
-                    <div class="carousel-item">
-                        <a href="#">
-                            <div class="carousel-item-image">
-                                <img src="<?php
-                                echo $libro["argazkia"];
-                                    ?>" class="item-image">
-                            </div>
-                            <div class="carousel-item-text">
-                                <span class="item-kicker">
-                                    <?php
-                                    echo $libro["idazlea"];
-                                        ?>
-                                </span>
-                                <h3 class="item-title">
-                                    <?php
-                                    echo $libro["izenburua"];
-                                        ?>
-                                </h3>
-                            </div>
-                        </a>
-                    </div>
-                <?php }
 
-                ?>
+                </div>
             </div>
-            <!-- END CAROUSEL -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    <?php }
-
-    public function footer()
-    { ?>
-        <footer>
-            <span class="logo_wrap">
-                <a href="#">
-                    <img src="Views/img/logo.jpg" class="logo-sm" alt="Liburuen Orgatxoa Logo">
-                </a>
-            </span>
-            <nav>
-                <ul>
-                    <li><a href="https://www.tiktok.com/es/"><i class="fa-brands fa-tiktok"></i></a></li>
-                    <li><a href="https://www.instagram.com/?hl=es"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a></li>
-                </ul>
-            </nav>
-            <p>Irudi guztiek CC BY-NC 4.0 eta CC BY 2.0 lizentziak dituzte.</p>
-        </footer>
+        <!-- END CAROUSEL -->
+        </div>
     <?php }
 
 }

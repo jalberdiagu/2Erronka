@@ -43,6 +43,7 @@ class MEskaera extends Konexioa {
         $sententzia->close();
     }
 
+    
     //Delte eskaera
     public function deleteEskaeraById($id_eska) {
         $statement = $this->getKon()->prepare("DELETE FROM eskaerak WHERE id_eska = ?");
