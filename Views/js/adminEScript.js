@@ -2,7 +2,7 @@
 erabkBistaratu();
 
 function erabkBistaratu(bilaketa){
-    fetch("CARead.php", {
+    fetch("CAERead.php", {
         method:"POST",
         body: bilaketa
     }).then(response => response.text()).then(response => {
@@ -11,7 +11,7 @@ function erabkBistaratu(bilaketa){
 }
 
 erregistratu.addEventListener("click", () => {
-    fetch("registrar.php", {
+    fetch("CAECreate.php", {
         method: "POST",
         body: new FormData(frm)
     }).then(response => response.text()).then(response => {
@@ -50,7 +50,7 @@ function erabkEzabatu(id_erab){
         cancelButtonText: 'NO'
     }).then((result) => {
         if(result.isConfirmed){
-            fetch("CADelete.php", {
+            fetch("CAEDelete.php", {
                 method:"POST",
                 body: id_erab
             }).then(response => response.text()).then(response => {
@@ -69,11 +69,10 @@ function erabkEzabatu(id_erab){
 }
 
 function erabkAldatu(id_erab){
-    fetch("CAUpdate.php", {
+    fetch("CAEUpdate.php", {
         method:"POST", 
         body: id_erab
     }).then(response => response.json()).then(response => {
-        id_erab.value = response.id_erab;
         izena.value = response.izena;
         abizena.value = response.abizena;
         email.value = response.email;

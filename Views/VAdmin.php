@@ -20,7 +20,6 @@
                         <form action="" method="post" id="frm">
                             <div class="form-group">
                                 <label for="">Izena</label>
-                                <input type="hidden" name="idp" id="idp" value="">
                                 <input type="text" name="izena" id="izena" placeholder="Idatzi hemen izena" class="form-control">
                             </div>
                             <div class="form-group">
