@@ -8,32 +8,33 @@ class CErabiltzailea {
         session_start();
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $email = $_POST['email'] ?? null;
-            $pasahitza = $_POST['pasahitza'] ?? null;
+            $email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
+            $pasahitza = $_POST['pasahitza'] ?? '';
 
             if (empty($email) || empty($pasahitza)) {
                 echo "<div class='alert alert-danger text-center'>Email eta pasahitza parametroak falta dira!</div>";
-            } else {
-                $erabModel = new \Model\MErabiltzailea();
-                $erab = $erabModel->login($email, $pasahitza);
+                return;
+            }
 
-                if ($erab) {
-                    $_SESSION['user'] = $erab;
-                    if ($erab['rola'] == 1) {
-                        header('Location: /2Erronka/Views/VAdmin.php');
-                    } elseif ($erab['rola'] == 0) {
-                        header('Location: /2Erronka/Controller/index.php');
-                    } else {
-                        echo "<div class='alert alert-danger text-center'>Errorea: Ezin da identifikatu erabiltzaile mota.</div>";
-                    }
-                    exit();
+            $erabModel = new \Model\MErabiltzailea();
+            $erab = $erabModel->login($email, $pasahitza);
+
+            if ($erab) {
+                $_SESSION['user'] = $erab;
+                session_regenerate_id(true);
+
+                // Redirige según el rol
+                if ($erab['rola'] == 1) {
+                    header('Location: /2Erronka/Views/VAdmin.php');
                 } else {
-                    echo "<div class='alert alert-danger text-center'>Email edo pasahitza okerra.</div>";
+                    header('Location: /2Erronka/Controller/index.php');
                 }
+                exit();
+            } else {
+                echo "<div class='alert alert-danger text-center'>Email edo pasahitza okerra.</div>";
             }
         }
     }
-
 
     public function insert() {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -45,7 +46,7 @@ class CErabiltzailea {
                     'pasahitza' => password_hash($_POST['pasahitza'], PASSWORD_DEFAULT),
                     'rola' => 0 
                 ];
-                
+
                 $usuarioModel = new \Model\MErabiltzailea();
                 
                 if ($usuarioModel->insertErab($erabiltzailea)) {
@@ -59,6 +60,5 @@ class CErabiltzailea {
         }
         require_once(__DIR__ . "/../Views/VsortuErabiltzailea.php");
     }
-    
 }
 ?>
