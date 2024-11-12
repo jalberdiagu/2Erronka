@@ -16,6 +16,6 @@ if(isset($_POST)){
     }else{
         $con = new Model\MAErabiltzailea();
         $con->updateErab($izena, $abizena, $email, $pasahitza, $rola, $id_erab);
-        echo "update";
+        echo "update";+
     }
 }
