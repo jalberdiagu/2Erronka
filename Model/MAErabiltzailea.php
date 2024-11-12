@@ -6,19 +6,23 @@ class MAErabiltzailea extends Konexioa{
 
     //AERead
     public function getErabk($data){
-        $query = $this->getKon()->prepare("SELECT * FROM erabiltzaileak ORDER BY id_erab ASC");
-    $query->execute();
+        if($data ==""){
+            $query = $this->getKon()->prepare("SELECT * FROM erabiltzaileak ORDER BY id_erab ASC");
+            $query->execute();
     
-    if($data!==""){
-        $query = $this->getKon()->prepare("SELECT * FROM erabiltzaileak WHERE id_erab LIKE '%".$data."%' OR izena LIKE '%".$data."%' OR abizena LIKE '%".$data."%' OR email LIKE '%".$data."%' OR pasahitza LIKE '%".$data."%' OR rola LIKE '%".$data."%'");
-        $query->execute();
-    }
+        }else{
+            $query = $this->getKon()->prepare("SELECT * FROM erabiltzaileak WHERE id_erab LIKE CONCAT('%', ?, '%') OR izena LIKE CONCAT('%', ?, '%') OR abizena LIKE CONCAT('%', ?, '%') OR email LIKE CONCAT('%', ?, '%') OR pasahitza LIKE CONCAT('%', ?, '%') OR rola LIKE CONCAT('%', ?, '%')");
+            $query->bind_param("issssi", $data, $data, $data, $data, $data, $data);
+            $query->execute();
+        }
     $emaitza = $query->get_result();
 
     $erabk= [];
     while($lerroa = $emaitza->fetch_assoc()){
         $erabk[]=$lerroa;
     }
+    $emaitza->free();
+    $query->close();
     return $erabk;
     }
 
@@ -27,11 +31,13 @@ class MAErabiltzailea extends Konexioa{
         $query = $this->getKon()->prepare('INSERT INTO erabiltzaileak(izena, abizena, email, pasahitza, rola) VALUES (?, ?, ?, ?, ?)');
         $query->bind_param("ssssi", $izena, $abizena, $email, $pasahitza, $rola);
         $query->execute();
+        $query->close();
         }
-        public function updateErab($izena, $abizena, $email, $pasahitza, $rola, $id_erab){
+    public function updateErab($izena, $abizena, $email, $pasahitza, $rola, $id_erab){
             $query = $this->getKon()->prepare("UPDATE erabiltzaileak SET izena= ? ,abizena= ? ,email= ? ,pasahitza= ? ,rola= ? WHERE id_erab= ?");
         $query->bind_param("ssssii", $izena, $abizena, $email, $pasahitza, $rola, $id_erab);
         $query->execute();
+        $query->close();
         }
 
     //AEUpdate
@@ -45,6 +51,7 @@ class MAErabiltzailea extends Konexioa{
         while($lerroa = $emaitza->fetch_assoc()){
             $erabk[]=$lerroa;
         }
+        $query->close();
         return $erabk;
     }
     
@@ -53,5 +60,6 @@ class MAErabiltzailea extends Konexioa{
         $query = $this->getKon()->prepare("DELETE * FROM erabiltzaileak WHERE id_erab = ?");
         $query-> bind_param("i", $id_erab);
         $query->execute();
+        $query->close();
     }
 }

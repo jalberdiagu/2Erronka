@@ -14,8 +14,9 @@ erregistratu.addEventListener("click", () => {
     fetch("/2Erronka/Controller/CAECreate.php", {
         method: "POST",
         body: new FormData(frm)
-    }).then(response => response.text()).then(response => {
-        if(response == "insert"){
+    }).then(response => response.json()).then(response => {
+        console.log("response:" + response.tipo);
+        if(response.tipo == "insert"){
             Swal.fire({
                 icon: 'success',
                 title: 'Erregistratuta',
@@ -24,7 +25,7 @@ erregistratu.addEventListener("click", () => {
             })
             frm.reset();
             erabkBistaratu();
-        }else{
+        }else if(response.tipo == "update"){
             Swal.fire({
                 icon: 'success',
                 title: 'Aldatuta',

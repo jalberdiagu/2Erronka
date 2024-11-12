@@ -45,11 +45,14 @@ class MErabiltzailea extends Konexioa {
     }
 
     public function insertErab($erab){
-        $sententzia = $this->getKon()->prepare("INSERT INTO erabiltzaileak(izena, abizena, email, pasahitza, rola) VALUES (?,?,?,?)");
-        $sententzia->bind_param("ssss",$erab["izena"], $erab["abizena"], $erab["email"], $erab["pasahitza"], 0);
-
-        $sententzia->execute();
+        // Corrige el número de parámetros en bind_param y especifica rola = 0
+        $sententzia = $this->getKon()->prepare("INSERT INTO erabiltzaileak (izena, abizena, email, pasahitza, rola) VALUES (?, ?, ?, ?, ?)");
+        $rola = 0;
+        $sententzia->bind_param("ssssi", $erab["izena"], $erab["abizena"], $erab["email"], $erab["pasahitza"], $rola);
+        
+        $result = $sententzia->execute();
         $sententzia->close();
+        return $result;
     }
 
     public function updateErab($erabiltzailea){

@@ -68,6 +68,7 @@
                             <th>Email</th>
                             <th>Pasahitza</th>
                             <th>Rola</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody id="erantzuna">
