@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/sortuErabiltzailea.css">
+    <link rel="stylesheet" href="../Views/css/sortuErabiltzailea.css">
     <title>Sortu Erabiltzailea</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
                 <i class="bi bi-arrow-left-circle-fill"></i>
             </a>
             <h1 class="text-center mb-4 text-primary">Sortu Erabiltzailea Berria</h1>
-            <form action="/2Erronka/Controller/index.php?action=insert" method="POST">
+            <form action="../Controller/CErabInsert.php" method="POST">
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
