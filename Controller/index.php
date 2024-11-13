@@ -1,7 +1,7 @@
 <?php
 require(__DIR__ . '/../Views/VPPrincipal.php');
 require(__DIR__ . '/../Model/MLiburuak.php');
-require_once(__DIR__ . '/CErabiltzailea.php');
+require_once(__DIR__ . '/CErabInsert.php');
 
 use Controller\CErabiltzailea;
 
