@@ -18,6 +18,10 @@
                     </div>
                     <div class="card-body">
                         <form action="" method="post" id="frm">
+                            <div class="form-group" style="display: none;">
+                                <label for="">ID</label>
+                                <input type="number" name="id_erab" id="id_erab" class="form-control">
+                            </div>
                             <div class="form-group">
                                 <label for="">Izena</label>
                                 <input type="text" name="izena" id="izena" placeholder="Idatzi hemen izena" class="form-control">
@@ -36,7 +40,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Rola</label>
-                                <input type="number" min="0" max="1" name="rola" id="rola" placeholder="0= Erabiltzailea; 1= Administratzailea" class="form-control">
+                                <input type="text" name="rola" id="rola" placeholder="0= Erabiltzailea; 1= Administratzailea" class="form-control">
                             </div>
                             <div class="form-group">
                                 <input type="button" value="Erregistratu" id="erregistratu" class="btn btn-primary btn-block">

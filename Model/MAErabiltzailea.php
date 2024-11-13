@@ -48,16 +48,17 @@ class MAErabiltzailea extends Konexioa{
 
         $emaitza = $query->get_result();
 
+        $erab = [];
         while($lerroa = $emaitza->fetch_assoc()){
-            $erabk[]=$lerroa;
+            $erab[]=$lerroa;
         }
         $query->close();
-        return $erabk;
+        return $erab;
     }
     
     //AEDelete
     public function deleteErab($id_erab){
-        $query = $this->getKon()->prepare("DELETE * FROM erabiltzaileak WHERE id_erab = ?");
+        $query = $this->getKon()->prepare("DELETE FROM erabiltzaileak WHERE id_erab = ?");
         $query-> bind_param("i", $id_erab);
         $query->execute();
         $query->close();

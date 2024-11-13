@@ -15,7 +15,7 @@ class Konexioa{
     public function getKon(){
     return $this->kon;
     }
-    public function closeKon($kon){
+    public function closeKon(){
         $this->kon->close();
     }
 }

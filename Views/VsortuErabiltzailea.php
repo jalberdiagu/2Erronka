@@ -15,7 +15,7 @@
                 <i class="bi bi-arrow-left-circle-fill"></i>
             </a>
             <h1 class="text-center mb-4 text-primary">Sortu Erabiltzailea Berria</h1>
-            <form action="/2Erronka/Controller/index.php?action=insert" method="POST">
+            <form action="../Controller/CErabInsert.php" method="POST">
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
