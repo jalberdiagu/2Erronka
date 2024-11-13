@@ -2,9 +2,11 @@
 erabkBistaratu();
 
 function erabkBistaratu(bilaketa){
+    const formData = new FormData();
+    formData.append("bilaketa", bilaketa);
     fetch("/2Erronka/Controller/CAERead.php", {
         method:"POST",
-        body: bilaketa
+        body: formData
     }).then(response => response.text()).then(response => {
         erantzuna.innerHTML = response;
     });
@@ -51,9 +53,11 @@ function erabkEzabatu(id_erab){
         cancelButtonText: 'NO'
     }).then((result) => {
         if(result.isConfirmed){
+            const formData = new FormData();
+            formData.append("id_erab", id_erab);
             fetch("/2Erronka/Controller/CAEDelete.php", {
                 method:"POST",
-                body: id_erab
+                body: formData
             }).then(response => response.text()).then(response => {
                 if(response == "delete"){
                     erabkBistaratu();
@@ -70,16 +74,18 @@ function erabkEzabatu(id_erab){
 }
 
 function erabkAldatu(id_erab){
+    console.log("response:" + id_erab);
     fetch("/2Erronka/Controller/CAEUpdate.php", {
         method:"POST", 
-        body: id_erab
+        body: new FormData().append("id_erab", id_erab)
     }).then(response => response.json()).then(response => {
-        izena.value = response.izena;
-        abizena.value = response.abizena;
-        email.value = response.email;
-        pasahitza.value = response.pasahitza;
-        rola.value = response.rola;
-        erregistratu.value = "Eguneratu";
+        document.getElementById("id_erab").value = response.id_erab;
+        document.getElementById("izena").value = response.izena;
+        document.getElementById("abizena").value = response.abizena;
+        document.getElementById("email").value = response.email;
+        document.getElementById("pasahitza").value = response.pasahitza;
+        document.getElementById("rola").value = response.rola;
+        document.getElementById("erregistratu").value = "Eguneratu";
     })
 }
 
