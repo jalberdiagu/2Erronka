@@ -11,11 +11,13 @@ class MErabiltzailea extends Konexioa {
         $result = $stmt->get_result();
         $user = $result->fetch_assoc();
 
+        // Verificar si el usuario existe y si la contraseña coincide con el hash
         if ($user && password_verify($pasahitza, $user['pasahitza'])) {
             return $user; // Retorna el usuario si la contraseña es correcta
         }
         return false; // Retorna falso si no se encuentra el usuario o la contraseña es incorrecta
     }
+    
 
     public function getErab($id_erab){
         $erab = null;

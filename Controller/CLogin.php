@@ -11,7 +11,7 @@ class CLogin {
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
-            $pasahitza = $_POST['pasahitza'] ?? '';
+            $pasahitza = trim($_POST['pasahitza'] ?? ''); 
 
             if (empty($email) || empty($pasahitza)) {
                 echo "<div class='alert alert-danger text-center'>Email eta pasahitza parametroak falta dira!</div>";
@@ -25,11 +25,10 @@ class CLogin {
                 $_SESSION['user'] = $erab;
                 session_regenerate_id(true);
 
-                // Redirige según el rol
                 if ($erab['rola'] == 1) {
-                    header('Location: /2Erronka/Views/VAdmin.php');
+                    header('Location: /2Erronka/Views/VAdmin.php'); 
                 } else {
-                    header('Location: /2Erronka/Controller/index.php');
+                    header('Location: /2Erronka/Controller/index.php'); 
                 }
                 exit();
             } else {
@@ -39,7 +38,6 @@ class CLogin {
         }
         require_once(__DIR__ . "/../Views/VLogin.php");
     }
-    
 }
 
 $controller = new CLogin();
