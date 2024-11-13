@@ -166,6 +166,31 @@ a:hover {
         margin: 0 .5em;
     }
 }
+/*Cards*/
+.card-img-top{
+    height: 27rem;
+}
+.card{
+    margin: 10px;
+}
+.btn-primary{
+    background-color: rgb(53, 53, 4);
+} 
+
+/*Ikusi Liburua*/
+#producto{
+    display: flex;
+}
+#portada img{
+    height: 600px; 
+}
+#producto #texto{
+    padding: 20px;
+    padding-bottom: 10px;
+}
+#texto a{
+    color: rgb(13, 13, 13);
+}
 /*Footer*/
 footer{
     display: flex;
