@@ -31,7 +31,7 @@ class Vista
             <header>
                 <span class="logo_wrap">
                     <a href="index.php">
-                        <img src="Views/img/logo.jpg" alt="Liburuen Orgatxoa Logo">
+                        <img src="/2Erronka/Views/img/logo.jpg" alt="Liburuen Orgatxoa Logo">
                     </a>
                 </span>
                 <nav>
@@ -39,7 +39,7 @@ class Vista
                         <span id="bar"></span>
                     </span>
                     <ul>
-                        <li><a href="">PRODUKTUAK</a></li>
+                        <li><a href="\2Erronka\Controller\CLiburuak.php">PRODUKTUAK</a></li>
                         <li><a href="">AGINDUAK</a></li>
                         <li><a href="http://localhost/2Erronka/Views/Vlogin.php"><i class="bi bi-person fs-5"></i></a></li>
                     </ul>

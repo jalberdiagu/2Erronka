@@ -23,7 +23,6 @@ if(isset($_POST)){
         $id_erab = (int) $_POST["id_erab"];
         $con = new Model\MAErabiltzailea();
         $con->updateErab($izena, $abizena, $email, $pasahitza, $rola, $id_erab);
-
         $prueba["tipo"] = "update";
     }
 

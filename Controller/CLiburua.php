@@ -10,5 +10,6 @@ $libroGet = $con->getLiburua($book);
 
 $vista= new VLiburua();
 $vista->initHTML();
+$vista->navbar();
 $vista->Libro($libroGet);
 $vista->endHTML();
