@@ -11,7 +11,6 @@ require(__DIR__ . '/../Model/MLiburuak.php');
     $vista = new VPPrincipal();
     $vista->initHTML();
     $vista->navbar();
-    $vista->carousel_hot($librosHot);
     $vista->carousel_new($librosNew);
     $vista->endHTML();
 
