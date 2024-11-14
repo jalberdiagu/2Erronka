@@ -11,11 +11,17 @@ class MErabiltzailea extends Konexioa {
         $result = $stmt->get_result();
         $user = $result->fetch_assoc();
 
-        // Verificar si el usuario existe y si la contraseña coincide con el hash
-        if ($user && password_verify($pasahitza, $user['pasahitza'])) {
-            return $user; // Retorna el usuario si la contraseña es correcta
+        if ($user) {
+            if (password_verify($pasahitza, $user['pasahitza'])) {
+                return $user; 
+            } else {
+                echo "<div class='alert alert-danger text-center'>Pasahitza okerra da.</div>";
+            }
+            
+        } else {
+            echo "<div class='alert alert-danger text-center'>Erabiltzailea ez da aurkitu.</div>";
         }
-        return false; // Retorna falso si no se encuentra el usuario o la contraseña es incorrecta
+        return false; 
     }
     
 
@@ -47,7 +53,6 @@ class MErabiltzailea extends Konexioa {
     }
 
     public function insertErab($erab){
-        // Corrige el número de parámetros en bind_param y especifica rola = 0
         $sententzia = $this->getKon()->prepare("INSERT INTO erabiltzaileak (izena, abizena, email, pasahitza, rola) VALUES (?, ?, ?, ?, ?)");
         $rola = 0;
         $sententzia->bind_param("ssssi", $erab["izena"], $erab["abizena"], $erab["email"], $erab["pasahitza"], $rola);
@@ -73,4 +78,7 @@ class MErabiltzailea extends Konexioa {
         $sententzia->execute();
         $sententzia->close();
     }
+
 }//Klasearen amaiera
+
+?>

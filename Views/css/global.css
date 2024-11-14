@@ -261,7 +261,7 @@ footer{
         transition: .3s;
 
         &.logo-sm{
-            width: 10px;
+            width: 40px;
         }
     }
 }
