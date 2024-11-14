@@ -2,12 +2,9 @@
 erabkBistaratu();
 
 function erabkBistaratu(bilaketa){
-    console.log("recargar");
-    const formData = new FormData();
-    formData.append("bilaketa", bilaketa);
     fetch("/2Erronka/Controller/CAERead.php", {
         method:"POST",
-        body: formData
+        body: bilaketa
     }).then(response => response.text()).then(response => {
         erantzuna.innerHTML="";
         erantzuna.innerHTML = response;
@@ -104,7 +101,9 @@ bilatu.addEventListener("keyup", () => {
     const balioa = bilatu.value;
     if(balioa == ""){
         erabkBistaratu();
+        console.log("recargar");
     }else{
         erabkBistaratu(balioa);
+        console.log("recargar - " + balioa);
     }
 })

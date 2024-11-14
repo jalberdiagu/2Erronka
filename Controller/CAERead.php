@@ -15,8 +15,8 @@ foreach ($erabk as $data) { ?>
         <td><?=$data['pasahitza']?></td>
         <td><?=$data['rola']?></td>
         <td>
-            <button type='button' class='btn btn-success' onclick="erabkAldatu(<?=$data['id_erab']?>)">Aldatu</button>
-            <button type='button' class='btn btn-danger' onclick="erabkEzabatu(<?=$data['id_erab']?>)">Ezabatu</button>
+            <button type='button' class='btn btn-success' id="btnAldatu" onclick="erabkAldatu(<?=$data['id_erab']?>)">Aldatu</button>
+            <button type='button' class='btn btn-danger' id="btnEzabatu" onclick="erabkEzabatu(<?=$data['id_erab']?>)">Ezabatu</button>
         </td>        
     </tr>
 <?php }
