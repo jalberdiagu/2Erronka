@@ -6,15 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administratzailea</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/2Erronka/Views/css/admin.css" type="text/css">
 </head>
 
 <body>
-    <div class="container">
+    <nav class="navbar navbar-light" id="navbar">
+        <div class="container-fluid d-flex">
+            <h2 class=" justify-content-start">Administratzailearen panela</h2>
+            <ul class="navbar-nav d-flex flex-row ms-3 justify-content-end">
+                <li class="nav-item p-2 flex-fill">
+                    <a class="nav-link active" id="opMenu1" aria-current="page" href="#">Erabiltzaileak</a>
+                </li>
+                <li class="nav-item p-2 flex-fill">
+                    <a class="nav-link" id="opMenu" href="#">Liburuak</a>
+                </li>
+                <li class="nav-item p-2 flex-fill">
+                    <a class="nav-link" id="opMenu" href="#">Eskaerak</a>
+                </li>
+                <li class="nav-item p-2 flex-fill">
+                    <a class="nav-link" id="opMenu"href="#">Deskontuak</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid justify-content-center ">
+        <br>
         <div class="row">
             <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-header bg-primary">
-                        <h3 class="text-center">Erabiltzaileen erregistroa</h3>
+                <div class="card" id="panelErr">
+                    <div class="card-header" id="tituloErr">
+                        <h4 class="text-center">Erabiltzaileen erregistroa</h4>
                     </div>
                     <div class="card-body">
                         <form action="" method="post" id="frm">
@@ -64,7 +85,7 @@
 
 
                 <table class="table table-hover table-resposive">
-                    <thead class="thead-dark">
+                    <thead class="thead" id="tabla">
                         <tr>
                             <th>ID</th>
                             <th>Izena</th>
@@ -84,6 +105,9 @@
     </div>
     <script src="js/adminEScript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
