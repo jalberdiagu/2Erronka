@@ -3,8 +3,8 @@ $data = file_get_contents("php://input");
 
 require_once(__DIR__ . "/../Model/MAErabiltzailea.php");
 
-$con = new Model\MAErabiltzailea();
-$erabk = $con->getErabk($data);
+$kon = new Model\MAErabiltzailea();
+$erabk = $kon->getErabk($data);
 
 foreach ($erabk as $data) { ?>
     <tr>

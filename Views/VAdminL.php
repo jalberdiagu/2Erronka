@@ -15,16 +15,16 @@
             <h2 class=" justify-content-start">Administratzailearen panela</h2>
             <ul class="navbar-nav d-flex flex-row ms-3 justify-content-end">
                 <li class="nav-item p-2 flex-fill">
-                    <a class="nav-link active" id="opMenu1" aria-current="page" href="VAdmin.php">Erabiltzaileak</a>
+                    <a class="nav-link" aria-current="page" href="VAdmin.php">Erabiltzaileak</a>
                 </li>
                 <li class="nav-item p-2 flex-fill">
-                    <a class="nav-link" id="opMenu" href="VAdminL.php">Liburuak</a>
+                    <a class="nav-link active" href="#">Liburuak</a>
                 </li>
                 <li class="nav-item p-2 flex-fill">
-                    <a class="nav-link" id="opMenu" href="#">Eskaerak</a>
+                    <a class="nav-link" href="#">Eskaerak</a>
                 </li>
                 <li class="nav-item p-2 flex-fill">
-                    <a class="nav-link" id="opMenu"href="#">Deskontuak</a>
+                    <a class="nav-link" href="#">Deskontuak</a>
                 </li>
             </ul>
         </div>
@@ -35,36 +35,24 @@
             <div class="col-lg-4">
                 <div class="card" id="panelErr">
                     <div class="card-header" id="tituloErr">
-                        <h4 class="text-center">Erabiltzaileen erregistroa</h4>
+                        <h4 class="text-center">Liburuen aldaketak</h4>
                     </div>
                     <div class="card-body">
                         <form action="" method="post" id="frm">
                             <div class="form-group" style="display: none;">
                                 <label for="">ID</label>
-                                <input type="number" name="id_erab" id="id_erab" class="form-control">
+                                <input type="text" name="id_prod" id="id_prod" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Izena</label>
-                                <input type="text" name="izena" id="izena" placeholder="Idatzi hemen izena" class="form-control">
+                                <label for="">Egoera</label>
+                                <input type="text" name="egoera" id="egoera" placeholder="0= Desaktibatuta; 1=Aktibatuta" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Abizena</label>
-                                <input type="text" name="abizena" id="abizena" placeholder="Idatzi hemen abizena" class="form-control">
+                                <label for="">Prezioa</label>
+                                <input type="number" name="prezioa" id="prezioa" placeholder="Idatzi hemen prezioa" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Email</label>
-                                <input type="text" name="email" id="email" placeholder="Idatzi hemen emaila" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Pasahitza</label>
-                                <input type="text" name="pasahitza" id="pasahitza" placeholder="Idatzi hemen pasahitza" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Rola</label>
-                                <input type="text" name="rola" id="rola" placeholder="0= Erabiltzailea; 1= Administratzailea" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="button" value="Erregistratu" id="erregistratu" class="btn btn-primary btn-block">
+                                <input type="button" value="Aldatu" id="erregistratu" class="btn btn-primary btn-block">
                             </div>
                         </form>
                     </div>
@@ -88,11 +76,10 @@
                     <thead class="thead" id="tabla">
                         <tr>
                             <th>ID</th>
-                            <th>Izena</th>
-                            <th>Abizena</th>
-                            <th>Email</th>
-                            <th>Pasahitza</th>
-                            <th>Rola</th>
+                            <th>Izenburua</th>
+                            <th>Prezioa</th>
+                            <th>Egoera</th>
+                            <th>Stocka</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -103,7 +90,7 @@
             </div>
         </div>
     </div>
-    <script src="js/adminEScript.js"></script>
+    <script src="js/adminLScript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

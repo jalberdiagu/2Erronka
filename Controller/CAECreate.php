@@ -10,21 +10,21 @@ if(isset($_POST)){
     $pasahitza = $_POST["pasahitza"];
     $rola = (int) $_POST["rola"];
 
-    $prueba = [
+    $result = [
         "tipo" => "nada"
     ];
     
     if(!isset($id_erab)){
-        $con = new Model\MAErabiltzailea();
-        $con->createErab($izena, $abizena, $email, $pasahitza, $rola);
+        $kon = new Model\MAErabiltzailea();
+        $kon->createErab($izena, $abizena, $email, $pasahitza, $rola);
 
-        $prueba["tipo"] = "insert";
+        $result["tipo"] = "insert";
 
     }else{
-        $con = new Model\MAErabiltzailea();
-        $con->updateErab($izena, $abizena, $email, $pasahitza, $rola, $id_erab);
-        $prueba["tipo"] = "update";
+        $kon = new Model\MAErabiltzailea();
+        $kon->updateErab($izena, $abizena, $email, $pasahitza, $rola, $id_erab);
+        $result["tipo"] = "update";
     }
 
-    echo json_encode($prueba);
+    echo json_encode($result);
 }

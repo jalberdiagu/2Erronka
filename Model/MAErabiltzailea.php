@@ -11,7 +11,13 @@ class MAErabiltzailea extends Konexioa{
             $query->execute();
     
         }else{
-            $query = $this->getKon()->prepare("SELECT * FROM erabiltzaileak WHERE id_erab LIKE CONCAT('%', ?, '%') OR izena LIKE CONCAT('%', ?, '%') OR abizena LIKE CONCAT('%', ?, '%') OR email LIKE CONCAT('%', ?, '%') OR pasahitza LIKE CONCAT('%', ?, '%') OR rola LIKE CONCAT('%', ?, '%')");
+            $query = $this->getKon()->prepare("SELECT * FROM erabiltzaileak 
+            WHERE id_erab LIKE CONCAT('%', ?, '%') 
+            OR izena LIKE CONCAT('%', ?, '%') 
+            OR abizena LIKE CONCAT('%', ?, '%') 
+            OR email LIKE CONCAT('%', ?, '%') 
+            OR pasahitza LIKE CONCAT('%', ?, '%') 
+            OR rola LIKE CONCAT('%', ?, '%')");
             $query->bind_param("issssi", $data, $data, $data, $data, $data, $data);
             $query->execute();
         }
