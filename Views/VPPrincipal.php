@@ -54,8 +54,9 @@ class VPPrincipal extends Vista
     { ?>
         <div id="autores_famosos">
             <h1>Autore famatuak</h1>
+            <br>
             <div class="containerAutor">
-                <div class="cardAutor">
+                <div class="cardAutor"> <a href='CLiburuak.php?idazlea=George R. R. Martin'></a>
                     <div class="border"></div>
                     <div class="avatarAutor">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Portrait_photoshoot_at_Worldcon_75%2C_Helsinki%2C_before_the_Hugo_Awards_%E2%80%93_George_R._R._Martin.jpg/1200px-Portrait_photoshoot_at_Worldcon_75%2C_Helsinki%2C_before_the_Hugo_Awards_%E2%80%93_George_R._R._Martin.jpg"
@@ -127,7 +128,7 @@ class VPPrincipal extends Vista
                 <div class="cardAutor">
                     <div class="border"></div>
                     <div class="avatarAutor">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/199526/jonsnow.jpg" alt="" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Gabriel_Garcia_Marquez.jpg" alt="" />
                     </div>
                     <hr />
                     <div class="statsAutor">
@@ -135,60 +136,60 @@ class VPPrincipal extends Vista
                         <hr />
                         <div>
                             <p>Generoa: Errealismo magikoa</p>
-                            <p>Liburuak: Bidaia lurraren erdigunera, Munduari buelta 80 egunetan</p>
-                            <p>Herrialdea: Frantzia</p>
-                            <blockquote>“La Tierra no necesita nuevos continentes, sino nuevos hombres.”</blockquote>
+                            <p>Liburuak: Ehun urteko bakardadea, Iragarritako heriotza baten kronika</p>
+                            <p>Herrialdea: Mexiko</p>
+                            <blockquote>“Maite zaitut ez zarenagatik, zurekin nagoenean naizenagatik baizik.”</blockquote>
                         </div>
                     </div>
                 </div>
                 <div class="cardAutor">
                     <div class="border"></div>
                     <div class="avatarAutor">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/199526/jonsnow.jpg" alt="" />
+                        <img src="https://areajugones.sport.es/wp-content/uploads/2024/07/brandon-sanderson-min-1560x880.jpg.webp" alt="" />
                     </div>
                     <hr />
                     <div class="statsAutor">
-                        <h2>Julio Verne</h2>
+                        <h2>Brandon Sanderson</h2>
                         <hr />
                         <div>
-                            <p>Generoa: Zientzia Fikzioa</p>
-                            <p>Liburuak: Bidaia lurraren erdigunera, Munduari buelta 80 egunetan</p>
-                            <p>Herrialdea: Frantzia</p>
-                            <blockquote>“La Tierra no necesita nuevos continentes, sino nuevos hombres.”</blockquote>
+                            <p>Generoa: Literatura Fantastikoa</p>
+                            <p>Liburuak: Mistborn (Saga), Ekaitz Artxiboa (Saga)</p>
+                            <p>Herrialdea: Estatu Batuak</p>
+                            <blockquote>“- Zer gertatu zaigu? Non dago gure ohorea? -Ohorea hil da. Baina ikusiko dut zer egin dezakedan. Gaizki ateratzen bada, zaindu nire gizonak.”</blockquote>
                         </div>
                     </div>
                 </div>
                 <div class="cardAutor">
                     <div class="border"></div>
                     <div class="avatarAutor">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/199526/jonsnow.jpg" alt="" />
+                        <img src="https://stephenking.es/img/el-autor/cover-mediana.jpg" alt="" />
                     </div>
                     <hr />
                     <div class="statsAutor">
-                        <h2>Julio Verne</h2>
+                        <h2>Stephen King</h2>
                         <hr />
                         <div>
-                            <p>Generoa: Zientzia Fikzioa</p>
-                            <p>Liburuak: Bidaia lurraren erdigunera, Munduari buelta 80 egunetan</p>
-                            <p>Herrialdea: Frantzia</p>
-                            <blockquote>“La Tierra no necesita nuevos continentes, sino nuevos hombres.”</blockquote>
+                            <p>Generoa: Izua</p>
+                            <p>Liburuak: It, Distira</p>
+                            <p>Herrialdea: Estatu Batuak</p>
+                            <blockquote>“Gauza egokia egiten ahalegintzen den jendea beti eroa dirudi.”</blockquote>
                         </div>
                     </div>
                 </div>
                 <div class="cardAutor">
                     <div class="border"></div>
                     <div class="avatarAutor">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/199526/jonsnow.jpg" alt="" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Franz_Kafka%2C_1923.jpg/640px-Franz_Kafka%2C_1923.jpg" alt="" />
                     </div>
                     <hr />
                     <div class="statsAutor">
-                        <h2>Julio Verne</h2>
+                        <h2>Franz Kafka</h2>
                         <hr />
                         <div>
-                            <p>Generoa: Zientzia Fikzioa</p>
-                            <p>Liburuak: Bidaia lurraren erdigunera, Munduari buelta 80 egunetan</p>
-                            <p>Herrialdea: Frantzia</p>
-                            <blockquote>“La Tierra no necesita nuevos continentes, sino nuevos hombres.”</blockquote>
+                            <p>Generoa: Errealismo Fantastikoa</p>
+                            <p>Liburuak: Metamorfosia, Gaztelua</p>
+                            <p>Herrialdea: Txekia</p>
+                            <blockquote>“Iraultza oro lurrundu eta burokraziaren arrasto bat uzten du atzean.”</blockquote>
                         </div>
                     </div>
                 </div>
