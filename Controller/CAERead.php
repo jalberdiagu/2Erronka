@@ -11,7 +11,6 @@ foreach ($erabk as $data) { ?>
         <td><?=$data['izena']?></td>
         <td><?=$data['abizena']?></td>
         <td><?=$data['email']?></td>
-        <td><?=$data['pasahitza']?></td>
         <td><?=$data['rola']?></td>
         <td>
             <button type='button' class='btn btn-success' id="btnAldatu" onclick="erabkAldatu(<?=$data['id_erab']?>)">Aldatu</button>

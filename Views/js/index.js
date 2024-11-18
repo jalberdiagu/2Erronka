@@ -8,6 +8,14 @@ document.addEventListener('scroll', () => {
         logo.classList.remove('logo-sm')
     }
 })
+document.addEventListener('scroll', () => {
+    const logo = document.querySelector('.logo_wrap h1')
+    if (window.scrollY > 0) {
+        logo.classList.add('titulo-sm')
+    } else {
+        logo.classList.remove('titulo-sm')
+    }
+})
 
 // Menuaren irekitzeko botoian klik egiterakoan, opzioak agertuko dira
 document.getElementById('hamburger_menu').addEventListener('click', () => {

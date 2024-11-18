@@ -38,12 +38,14 @@ class Vista
                     <a href="index.php">
                         <img src="/2Erronka/Views/img/logo.png" alt="Liburuen Orgatxoa Logo">
                     </a>
+                    <h1 id="izenburua">Liburuen Orgatxoa</h1>
                 </span>
                 <nav>
                     <span id="hamburger_menu">
                         <span id="bar"></span>
                     </span>
                     <ul>
+                        <li><a href="\2Erronka\Controller\index.php">HASIERA</a></li>
                         <li><a href="\2Erronka\Controller\CLiburuak.php">PRODUKTUAK</a></li>
                         <li><a href="">AGINDUAK</a></li>
                         <li><a href="http://localhost/2Erronka/Views/Vlogin.php"><i class="bi bi-person fs-5"></i></a></li>

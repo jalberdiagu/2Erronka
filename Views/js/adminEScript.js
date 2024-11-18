@@ -26,6 +26,7 @@ erregistratu.addEventListener("click", () => {
             })
             frm.reset();
             erabkBistaratu();
+            id_erab.value= "";
         }else if(response.tipo == "update"){
             Swal.fire({
                 icon: 'success',

@@ -9,7 +9,7 @@ class VPPrincipal extends Vista
     { ?>
 
         <div id="libros_new">
-            <h1>BERRIAK!</h1>
+            <h1 class="berriak">Berriak!</h1>
             <div id="carousel2" class="carousel">
                 <div class="carousel-inner">
 
