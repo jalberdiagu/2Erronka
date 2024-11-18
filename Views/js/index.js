@@ -79,7 +79,6 @@ function loadCartCount() {
 loadCartCount();
 
 document.getElementById('addToCartBtn').addEventListener('click', function() {
-    console.log("hola");
     addToCart(); 
     localStorage.setItem('cartCount', cartCount);
 });
