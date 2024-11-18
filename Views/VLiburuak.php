@@ -49,7 +49,7 @@ class VLiburuak extends Vista
                                 <p class="card-text"><?= $libro["idazlea"]; ?></p>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><?= $libro["prezioa"]; ?></li>
+                                <li class="list-group-item"><?= $libro["prezioa"]; ?>€</li>
                                 <li class="list-group-item"><?= $libro["generoa"]; ?></li>
                             </ul>
                             <div class="card-body">

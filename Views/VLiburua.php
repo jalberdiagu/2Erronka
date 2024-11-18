@@ -20,7 +20,7 @@ class VLiburua extends Vista
                 <h3><?= $libro["prezioa"]; ?>€</h3>
                 <p><?= $libro["argitaletxea"]; ?> - <?= $libro["isbn"]; ?></p>
                 <p><?= $libro["deskripzioa"]; ?></p>
-                <button class="add-to-cart">Gehitu Orgara</button>
+                <button id="addToCartBtn">Gehitu Orgara</button>
             </div>
         </div>
     <?php }
