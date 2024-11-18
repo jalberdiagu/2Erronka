@@ -1,9 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
 /*Oinarrizko estiloa orri guztientzat*/
 :root{
-    --bg-fondo: #FFF8DC;
-    --bg-header: #7e4d22;
-    --bg-header-menu: #352606;
-    --bg-header-menu-options: #352606;
+    --bg-fondo: #f5f1c7;
+    --bg-header: #b09765;
+    --bg-header-menu: #6e8952;
+    --bg-header-menu-options: #6e8952;
     --text-color-dark: #fff; 
 }
 
@@ -120,10 +121,9 @@ header{
 }
 
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
 body {
-  background-color: #F0F1F5;
-  font-family: 'Roboto', sans-serif;
+  background-color: #f5f1c7;
+  font-family: "Roboto", sans-serif;
 }
 
 a,
@@ -158,7 +158,7 @@ a:hover {
 }
 
 .cardAutor {
-    background: #f9f9f9; 
+    background: #e6f5c7; 
     border: 1px solid #ddd; 
     border-radius: 10px; 
     width: 300px; 
@@ -166,10 +166,9 @@ a:hover {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease; 
-}
-
-.cardAutor:hover {
-    transform: scale(1.05); 
+    &:hover{
+        transform: scale(1.05);
+    }
 }
 
 .avatarAutor img {
@@ -221,25 +220,81 @@ a:hover {
 }
 .card{
     margin: 10px;
+    background-color:#dff5c7 ;
 }
 .btn-primary{
-    background-color: rgb(53, 53, 4);
+    background-color: #88ac62;
+    border-color:#88ac62;
+    &:hover{
+        background-color:#6e8952;
+        border-color:#6e8952;
+    }
 } 
 
 /*Ikusi Liburua*/
-#producto{
+#producto {
     display: flex;
-}
-#portada img{
-    height: 600px; 
-}
-#producto #texto{
+    flex-wrap: wrap; 
+    gap: 20px; 
     padding: 20px;
-    padding-bottom: 10px;
+    align-items: center; 
 }
-#texto a{
-    color: rgb(13, 13, 13);
+
+#portada img {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
+
+
+#texto {
+    flex: 1; 
+    min-width: 250px; 
+    max-width: 600px; 
+}
+
+/* Boton */
+.add-to-cart {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#texto h2 a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+#texto h2 a:hover {
+    text-decoration: underline;
+}
+
+#texto p {
+    color: #555;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    #producto {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    #portada img {
+        margin: 0 auto;
+    }
+
+    #texto {
+        text-align: center;
+    }
+}
+
 /*Footer*/
 footer{
     display: flex;

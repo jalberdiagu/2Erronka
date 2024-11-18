@@ -10,8 +10,6 @@ class CLogin {
         session_start();
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
-            $pasahitza = trim($_POST['pasahitza'] ?? ''); 
 
             if (empty($email) || empty($pasahitza)) {
                 echo "<div class='alert alert-danger text-center'>Email eta pasahitza parametroak falta dira!</div>";
