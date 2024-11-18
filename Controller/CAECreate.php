@@ -14,7 +14,7 @@ if(isset($_POST)){
         "tipo" => "nada"
     ];
     
-    if(!isset($id_erab)){
+    if(empty($id_erab)){
         $kon = new Model\MAErabiltzailea();
         $kon->createErab($izena, $abizena, $email, $pasahitza, $rola);
 

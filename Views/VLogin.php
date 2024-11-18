@@ -27,10 +27,10 @@
             </div>
 
             <div class="mb-3">
-                <label for="pasahitza" class="form-label">Contraseña</label>
+                <label for="pasahitza" class="form-label">Pasahitza</label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
-                    <input type="password" class="form-control" id="pasahitza" name="pasahitza" placeholder="Contraseña" required>
+                    <input type="password" class="form-control" id="pasahitza" name="pasahitza" placeholder="Pasahitza" required>
                 </div>
             </div>
             
@@ -40,12 +40,13 @@
             </div>
             
             <div class="d-flex justify-content-center">
-                <button type="reset" class="btn btn-secondary me-2">Ezabatu</button>
-                <button type="submit" class="btn btn-primary">Sartu</button>
+            <button type="reset" class="btn btn-outline-danger w-48 me-3"><i class="bi bi-trash"></i> Garbitu</button>
+            <button type="submit" class="btn btn-primary w-48"><i class="bi bi-check-circle-fill"></i>  Saioa hasi</button>
             </div>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/login.js"></script>
+    
 </body>
 </html>

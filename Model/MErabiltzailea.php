@@ -10,7 +10,7 @@ class MErabiltzailea extends Konexioa {
         $stmt->execute();
         $result = $stmt->get_result();
         $user = $result->fetch_assoc();
-
+                         
         if ($user) {
             if (password_verify($pasahitza, $user['pasahitza'])) {
                 return $user; 

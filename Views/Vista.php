@@ -46,7 +46,7 @@ class Vista
                     <ul>
                         <li><a href="\2Erronka\Controller\CLiburuak.php">PRODUKTUAK</a></li>
                         <li><a href="">AGINDUAK</a></li>
-                        <li><a href="http://localhost/2Erronka/Views/Vlogin.php"><i class="bi bi-person fs-5"></i></a></li>
+                        <li><a href="http://localhost/2Erronka/Views/Vlogin.php"><i id="perfil" class="bi bi-person fs-5"></i></a></li>
                         <li><a href="http://localhost/2Erronka/Views/VOrga.php" class="cart-icon">
                                 <i class="bi bi-cart fs-5"></i>
                                 <span class="cart-count" id="cartCount">0</span>
@@ -108,6 +108,7 @@ class Vista
                 integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
             <!-- JS Index -->
             <script src="\2Erronka\Views\js\index.js"></script>
+            <script src="\2Erronka\Views\js\perfil.js"></script>
 
         </body>
 
