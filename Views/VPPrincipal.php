@@ -57,7 +57,6 @@ class VPPrincipal extends Vista
             <br>
             <div class="containerAutor">
                 <div class="cardAutor"> <a href='CLiburuak.php?idazlea=George R. R. Martin'></a>
-                    <div class="border"></div>
                     <div class="avatarAutor">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Portrait_photoshoot_at_Worldcon_75%2C_Helsinki%2C_before_the_Hugo_Awards_%E2%80%93_George_R._R._Martin.jpg/1200px-Portrait_photoshoot_at_Worldcon_75%2C_Helsinki%2C_before_the_Hugo_Awards_%E2%80%93_George_R._R._Martin.jpg"
                             alt="" />
@@ -75,7 +74,6 @@ class VPPrincipal extends Vista
                     </div>
                 </div>
                 <div class="cardAutor">
-                    <div class="border"></div>
                     <div class="avatarAutor">
                         <img src="https://m.media-amazon.com/images/S/amzn-author-media-prod/8cigckin175jtpsk3gs361r4ss.jpg " alt="" />
                     </div>
@@ -92,7 +90,6 @@ class VPPrincipal extends Vista
                     </div>
                 </div>
                 <div class="cardAutor">
-                    <div class="border"></div>
                     <div class="avatarAutor">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/F%C3%A9lix_Nadar_1820-1910_portraits_Jules_Verne.jpg/640px-F%C3%A9lix_Nadar_1820-1910_portraits_Jules_Verne.jpg" alt="" />
                     </div>
@@ -109,7 +106,6 @@ class VPPrincipal extends Vista
                     </div>
                 </div>
                 <div class="cardAutor">
-                    <div class="border"></div>
                     <div class="avatarAutor">
                         <img src="https://m.media-amazon.com/images/S/amzn-author-media-prod/qg9l4vrgesf4gcc533031l6si.jpg" alt="" />
                     </div>
@@ -126,7 +122,6 @@ class VPPrincipal extends Vista
                     </div>
                 </div>
                 <div class="cardAutor">
-                    <div class="border"></div>
                     <div class="avatarAutor">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Gabriel_Garcia_Marquez.jpg" alt="" />
                     </div>
@@ -143,7 +138,6 @@ class VPPrincipal extends Vista
                     </div>
                 </div>
                 <div class="cardAutor">
-                    <div class="border"></div>
                     <div class="avatarAutor">
                         <img src="https://areajugones.sport.es/wp-content/uploads/2024/07/brandon-sanderson-min-1560x880.jpg.webp" alt="" />
                     </div>
@@ -160,7 +154,6 @@ class VPPrincipal extends Vista
                     </div>
                 </div>
                 <div class="cardAutor">
-                    <div class="border"></div>
                     <div class="avatarAutor">
                         <img src="https://stephenking.es/img/el-autor/cover-mediana.jpg" alt="" />
                     </div>
@@ -177,7 +170,6 @@ class VPPrincipal extends Vista
                     </div>
                 </div>
                 <div class="cardAutor">
-                    <div class="border"></div>
                     <div class="avatarAutor">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Franz_Kafka%2C_1923.jpg/640px-Franz_Kafka%2C_1923.jpg" alt="" />
                     </div>
