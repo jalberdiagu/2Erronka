@@ -12,6 +12,7 @@ require(__DIR__ . '/../Model/MLiburuak.php');
     $vista->initHTML();
     $vista->navbar();
     $vista->carousel_new($librosNew);
+    $vista->autores();
     $vista->endHTML();
 
 ?>

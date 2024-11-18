@@ -143,15 +143,55 @@ a:hover {
     max-width: 100%;
     max-height: 100%;
 }
-    /* .carousel-control-prev-icon, .carousel-control-next-icon{
-        height: 30px;
-        width: 30px;
-        outline: black;
-        background-color: rgba(0, 0, 0, 0.3);
-        background-size: 100%, 100%;
-        border-radius: 50%;
-        border: 1px solid black;
-    } */
+/*Autores*/
+
+#autores_famosos {
+    text-align: center;
+    padding: 20px;
+}
+
+.containerAutor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
+}
+
+.cardAutor {
+    background: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    width: 300px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease; 
+}
+
+.cardAutor:hover {
+    transform: scale(1.05); 
+}
+
+.avatarAutor img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-top: 10px;
+}
+
+.statsAutor h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.statsAutor p, .statsAutor blockquote {
+    margin: 5px 0;
+    color: #666;
+}
+
+
 @media screen and (min-width:576px){
     .carousel-inner{
         display: flex;
