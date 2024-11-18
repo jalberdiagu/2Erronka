@@ -1,14 +1,12 @@
 <?php
-
 namespace Controller;
 
-require_once(__DIR__ . "/../Model/MErabiltzailea.php");
+require_once(__DIR__ . '/../Model/MErabiltzailea.php');
+
+use Model\MErabiltzailea;
 
 class CLogin {
-
-    public function egiaztatuLogin() {
-        session_start();
-
+    public function login() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if (empty($_POST['email']) || empty($_POST['pasahitza'])) {
@@ -29,17 +27,19 @@ class CLogin {
                 } else {
                     header('Location: /2Erronka/Controller/index.php');
                 }
-                exit();
             } else {
-                echo "<div class='alert alert-danger text-center'>Email edo pasahitza okerra.</div>";
+                echo "<div class='alert alert-danger'>Datuak falta dira!</div>";
             }
         }
-        require_once(__DIR__ . "/../Views/VLogin.php");
+
+        require_once(__DIR__ . '/../Views/VLogin.php');
     }
 }
 
+
+
 $controller = new CLogin();
-$controller->egiaztatuLogin();
+$controller->login();
 
 
 ?>

@@ -13,7 +13,7 @@ class CErabiltzailea {
                     'izena' => $_POST['izena'],
                     'abizena' => $_POST['abizena'],
                     'email' => $_POST['email'],
-                    'pasahitza' => password_hash($_POST['pasahitza'], PASSWORD_DEFAULT),
+                    'pasahitza' => password_hash($_POST['pasahitza'], PASSWORD_DEFAULT), 
                     'rola' => 0 
                 ];
 
