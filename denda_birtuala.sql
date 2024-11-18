@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2024 a las 12:43:21
+-- Tiempo de generación: 18-11-2024 a las 12:48:05
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -45,7 +45,7 @@ CREATE TABLE `erabiltzaileak` (
   `izena` varchar(25) NOT NULL,
   `abizena` varchar(25) NOT NULL,
   `email` varchar(25) NOT NULL,
-  `pasahitza` varchar(25) NOT NULL,
+  `pasahitza` varchar(100) NOT NULL,
   `rola` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -54,11 +54,8 @@ CREATE TABLE `erabiltzaileak` (
 --
 
 INSERT INTO `erabiltzaileak` (`id_erab`, `izena`, `abizena`, `email`, `pasahitza`, `rola`) VALUES
-(1, 'Jon', 'Alberdi', 'jon@gmail.com', '12345', 1),
-(2, 'Ane', 'Goikuria', 'ane@gmail.com', '678910', 0),
-(3, 'Jon', 'Stanton', 'stanton11@gmail.com', '666', 1),
-(4, 'Anton', 'Tshans', 'anton@gmail.com', '999', 1),
-(5, 'Ibai', 'Amo', 'Amo23@gmail.com', '1234', 0);
+(47, 'Ane', 'Goikuria', 'Ane@gmail.com', '$2y$10$.KvcJqifSBs58ahzA6TOQu46PCRQAq.A8WiO9bsUAWDP/HrmcgHFK', 0),
+(48, 'Jon', 'Alberdi', 'jon@gmail.com', '$2y$10$l5Wabu4Y6NTT5kn182diUeaWDXNUOedzCCRYhVLKOaXQxadjw3dr2', 1);
 
 -- --------------------------------------------------------
 
@@ -206,7 +203,7 @@ ALTER TABLE `deskontuak`
 -- AUTO_INCREMENT de la tabla `erabiltzaileak`
 --
 ALTER TABLE `erabiltzaileak`
-  MODIFY `id_erab` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_erab` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT de la tabla `eskaerak`
