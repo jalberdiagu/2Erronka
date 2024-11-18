@@ -54,11 +54,6 @@ class Vista
     { ?>
 
             <footer>
-                <span class="logo_wrap">
-                    <a href="#">
-                        <img src="Views/img/logo.jpg" class="logo-sm" alt="Liburuen Orgatxoa Logo">
-                    </a>
-                </span>
                 <nav>
                     <ul>
                         <li><a href="https://www.tiktok.com/es/"><i class="fa-brands fa-tiktok"></i></a></li>

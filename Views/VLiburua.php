@@ -17,7 +17,7 @@ class VLiburua extends Vista
                 <h2><a href='CLiburuak.php?writer=<?=
                     $libro["idazlea"];
                 ?>'><?= $libro["idazlea"]; ?></a></h2>
-                 <h3><?= $libro["prezioa"]; ?>€</h3>
+                <h3><?= $libro["prezioa"]; ?>€</h3>
                 <p><?= $libro["argitaletxea"]; ?> - <?= $libro["isbn"]; ?></p>
                 <p><?= $libro["deskripzioa"]; ?></p>
                 <button class="add-to-cart">Gehitu Orgara</button>
