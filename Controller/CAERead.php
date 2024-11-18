@@ -1,10 +1,9 @@
 <?php
+require_once(__DIR__ . "/../Model/MAErabiltzailea.php");
 $data = file_get_contents("php://input");
 
-require_once(__DIR__ . "/../Model/MAErabiltzailea.php");
-
-$con = new Model\MAErabiltzailea();
-$erabk = $con->getErabk($data);
+$kon = new Model\MAErabiltzailea();
+$erabk = $kon->getErabk($data);
 
 foreach ($erabk as $data) { ?>
     <tr>
@@ -15,9 +14,8 @@ foreach ($erabk as $data) { ?>
         <td><?=$data['pasahitza']?></td>
         <td><?=$data['rola']?></td>
         <td>
-            <button type='button' class='btn btn-success' onclick="erabkAldatu(<?=$data['id_erab']?>)">Aldatu</button>
-            <button type='button' class='btn btn-danger' onclick="erabkEzabatu(<?=$data['id_erab']?>)">Ezabatu</button>
+            <button type='button' class='btn btn-success' id="btnAldatu" onclick="erabkAldatu(<?=$data['id_erab']?>)">Aldatu</button>
+            <button type='button' class='btn btn-danger' id="btnEzabatu" onclick="erabkEzabatu(<?=$data['id_erab']?>)">Ezabatu</button>
         </td>        
     </tr>
 <?php }
-// echo json_encode($erantzuna);

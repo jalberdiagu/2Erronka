@@ -1,0 +1,44 @@
+#erregistratu{
+    background-color:#88ac62;
+    border-color:#88ac62;
+    &:hover{
+        background-color:#6e8952;
+    }
+}
+
+#panelErr{
+    background-color: #dff5c7;
+}
+#tituloErr{
+    background-color: #88ac62;
+    color: white;
+}
+
+#tabla{
+    background-color: #b09765 ;
+    color: white;
+}
+#navbar{
+    background-color: #b09765;
+    color: white;
+}
+
+#btnAldatu{
+    background-color:#83aa58;
+    border-color:#83aa58;
+}
+
+#btnEzabatu{
+    background-color:#ce3c3c;
+}
+
+body{
+    background-color: #f5f1c7;
+}
+.nav-link{
+    color: white!important;
+    &.active{
+        font-weight: bold!important;
+    }
+}
+

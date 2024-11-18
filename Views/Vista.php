@@ -31,7 +31,7 @@ class Vista
             <header>
                 <span class="logo_wrap">
                     <a href="index.php">
-                        <img src="/2Erronka/Views/img/logo.webp" alt="Liburuen Orgatxoa Logo">
+                        <img src="/2Erronka/Views/img/logo.png" alt="Liburuen Orgatxoa Logo">
                     </a>
                 </span>
                 <nav>

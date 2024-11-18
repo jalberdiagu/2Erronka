@@ -15,6 +15,7 @@ class CLogin {
 
             if (empty($email) || empty($pasahitza)) {
                 echo "<div class='alert alert-danger text-center'>Email eta pasahitza parametroak falta dira!</div>";
+                require_once(__DIR__ . "/../Views/VLogin.php");
                 return;
             }
 
@@ -33,7 +34,6 @@ class CLogin {
                 exit();
             } else {
                 echo "<div class='alert alert-danger text-center'>Email edo pasahitza okerra.</div>";
-                return;
             }
         }
         require_once(__DIR__ . "/../Views/VLogin.php");
