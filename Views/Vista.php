@@ -58,25 +58,7 @@ class Vista
             
 
             <style>
-                .bi-cart{
-                    color: white;
-                }
-                .cart-icon {
-                    position: relative;
-                    text-decoration: none;
-                    color: inherit;
-                }
-
-                .cart-count {
-                    position: absolute;
-                    top: 5px;
-                    right: -5px;
-                    background-color: red;
-                    color: white;
-                    border-radius: 50%;
-                    padding: 2px 5px;
-                    font-size: 0.8em;
-                }
+                
             </style>
         <?php }
 
