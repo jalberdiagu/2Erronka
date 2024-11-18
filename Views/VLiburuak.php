@@ -41,8 +41,8 @@ class VLiburuak extends Vista
             } else {
                 foreach ($libros as $libro) {
                     ?>
-                    <div class="col-sm-3 mb-3 mb-sm-0">
-                        <div class="card" style="width: 21rem;">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                        <div class="card h-100" style="width: 100%;">
                             <img src="<?= $libro["argazkia"]; ?>" class="card-img-top" alt="<?= $libro["izenburua"]; ?>">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $libro["izenburua"]; ?></h5>
