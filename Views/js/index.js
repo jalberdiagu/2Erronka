@@ -1,3 +1,4 @@
+
 // Scroll egiterakoan, headerraren logoa txikiagoa egiten da
 document.addEventListener('scroll', () => {
     const logo = document.querySelector('.logo_wrap img')
@@ -13,8 +14,8 @@ document.getElementById('hamburger_menu').addEventListener('click', () => {
     document.getElementById('hamburger_menu').classList.toggle('menu_open')
     document.querySelector('header nav ul').classList.toggle('menu_open')
 })
-
-//Carousel
+try {
+    //Carousel
 const multipleItemCarousel = document.querySelector('.carousel')
 
 const carousel = new bootstrap.Carousel(multipleItemCarousel, {
@@ -48,4 +49,42 @@ $('.carousel-control-prev').on('click', function () {
 }else{
     $(multipleItemCarousel).addClass('slide');
 }
+} catch (error) {
+    console.log("Error en el carousel");
+}
+try {
+    //Orga
+let cartCount = 0;
+
+function updateCartCount() {
+    document.getElementById('cartCount').innerText = cartCount;
+}
+
+
+function addToCart() {
+    cartCount++;
+    updateCartCount();
+    console.log(cartCount);
+}
+
+
+function loadCartCount() {
+    const storedCount = localStorage.getItem('cartCount');
+    if (storedCount) {
+        cartCount = parseInt(storedCount, 10);
+        updateCartCount();
+    }
+}
+
+loadCartCount();
+
+document.getElementById('addToCartBtn').addEventListener('click', function() {
+    console.log("hola");
+    addToCart(); 
+    localStorage.setItem('cartCount', cartCount);
+});
+} catch (error) {
+    console.log("Error en el carrito");
+}
+
 

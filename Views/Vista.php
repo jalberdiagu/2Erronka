@@ -58,6 +58,9 @@ class Vista
             
 
             <style>
+                .bi-cart{
+                    color: white;
+                }
                 .cart-icon {
                     position: relative;
                     text-decoration: none;
@@ -75,19 +78,6 @@ class Vista
                     font-size: 0.8em;
                 }
             </style>
-
-            <script>
-                let cartCount = 0;
-
-                function updateCartCount() {
-                    document.getElementById('cartCount').innerText = cartCount;
-                }
-
-                document.getElementById('addToCartBtn').addEventListener('click', function () {
-                    cartCount++; 
-                    updateCartCount(); 
-                });
-            </script>
         <?php }
 
     public function endHTML()
@@ -117,7 +107,7 @@ class Vista
             <script src="https://code.jquery.com/jquery-3.7.1.min.js"
                 integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
             <!-- JS Index -->
-            <script src="/2Erronka/Views/js/index.js"></script>
+            <script src="\2Erronka\Views\js\index.js"></script>
 
         </body>
 
