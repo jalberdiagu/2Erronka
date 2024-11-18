@@ -18,10 +18,10 @@
                     <a class="nav-link" aria-current="page" href="VAdmin.php">Erabiltzaileak</a>
                 </li>
                 <li class="nav-item p-2 flex-fill">
-                    <a class="nav-link active" href="#">Liburuak</a>
+                    <a class="nav-link active" href="VAdminL.php">Liburuak</a>
                 </li>
                 <li class="nav-item p-2 flex-fill">
-                    <a class="nav-link" href="#">Eskaerak</a>
+                    <a class="nav-link" href="VAdminP.php">Eskaerak</a>
                 </li>
                 <li class="nav-item p-2 flex-fill">
                     <a class="nav-link" href="#">Deskontuak</a>

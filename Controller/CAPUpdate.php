@@ -1,5 +1,16 @@
 <?php
-require_once("/../Konexioaa.php");
+require_once(__DIR__ . "/../MEskaera.php");
 
-$data = file_get_contents("php://input");
-$query = $pdo->prepare("SELECT * FROM eskaerak");
+$data = (int) file_get_contents("php://input");
+
+$kon = new Model\MEskaera();
+$eskaerak = $kon-> updateSelect($data);
+
+if (!empty($eskaerak)) {
+    echo json_encode($eskaerak);
+} else {
+    echo json_encode(["error" => "Ez da erregistrorik aurkitu."]);
+}
+
+$kon->closeKon();
+

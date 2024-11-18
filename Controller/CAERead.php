@@ -1,7 +1,6 @@
 <?php
-$data = file_get_contents("php://input");
-
 require_once(__DIR__ . "/../Model/MAErabiltzailea.php");
+$data = file_get_contents("php://input");
 
 $kon = new Model\MAErabiltzailea();
 $erabk = $kon->getErabk($data);
@@ -20,4 +19,3 @@ foreach ($erabk as $data) { ?>
         </td>        
     </tr>
 <?php }
-// echo json_encode($erantzuna);
