@@ -14,13 +14,10 @@ class VLiburua extends Vista
             </div>
             <div id="texto">
                 <h1><?= $libro["izenburua"]; ?></h1>
-                <h2><a href='CLiburuak.php?writer=<?=
-                    $libro["idazlea"];
-                ?>'><?= $libro["idazlea"]; ?></a></h2>
+                <h2><a href="#"><?= $libro["idazlea"]; ?></a></h2>
                 <h3><?= $libro["prezioa"]; ?>€</h3>
                 <p><?= $libro["argitaletxea"]; ?> - <?= $libro["isbn"]; ?></p>
                 <p><?= $libro["deskripzioa"]; ?></p>
-                <button id="addToCartBtn">Gehitu Orgara</button>
             </div>
         </div>
     <?php }

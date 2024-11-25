@@ -47,21 +47,10 @@ class Vista
                     <ul>
                         <li><a href="\2Erronka\Controller\index.php">HASIERA</a></li>
                         <li><a href="\2Erronka\Controller\CLiburuak.php">PRODUKTUAK</a></li>
-                        <li><a href="">AGINDUAK</a></li>
                         <li><a href="http://localhost/2Erronka/Views/Vlogin.php"><i id="perfil" class="bi bi-person fs-5"></i></a></li>
-                        <li><a href="http://localhost/2Erronka/Views/VOrga.php" class="cart-icon">
-                                <i class="bi bi-cart fs-5"></i>
-                                <span class="cart-count" id="cartCount">0</span>
-                            </a></li>
                     </ul>
                 </nav>
             </header>
-
-            
-
-            <style>
-                
-            </style>
         <?php }
 
     public function endHTML()

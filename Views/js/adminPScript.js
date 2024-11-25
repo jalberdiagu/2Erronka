@@ -42,7 +42,9 @@ function eskaerakAldatu(id_eska){
     fetch("/2Erronka/Controller/CAPUpdate.php", {
         method: "POST",
         body: id_eska
-    }).then(response => response.json()).then(response => {
+    }).then(response => response[0].json()).then(response => {
+
+        console.log("egoera: " + response.egoera);
         document.getElementById("id_eska").value= response[0].id_eska;
         document.getElementById("egoera").value= response[0].egoera;
     });

@@ -14,8 +14,7 @@ foreach ($eskaerak as $data) { ?>
         <td><?=$data['egoera']?></td>
         <td><?=$data['guztira']?></td>
         <td>
-            <button type='button' class='btn btn-success' id="btnAldatu" onclick="eskaeraAldatu(<?=$data['id_eska']?>)">Aldatu</button>
-            <button type='button' class='btn btn-danger' id="btnEzabatu" onclick="eskaeraXehe(<?=$data['id_eska']?>)">Xehetasunak</button>
+            <button type='button' class='btn btn-success' id="btnAldatu" onclick="eskaerakAldatu(<?=$data['id_eska']?>)">Aldatu</button>
         </td>        
     </tr>
 <?php }

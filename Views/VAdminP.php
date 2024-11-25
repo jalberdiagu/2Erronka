@@ -26,9 +26,6 @@
                 <li class="nav-item p-2 flex-fill">
                     <a class="nav-link active" href="VAdminP.php">Eskaerak</a>
                 </li>
-                <li class="nav-item p-2 flex-fill">
-                    <a class="nav-link" href="#">Deskontuak</a>
-                </li>
             </ul>
         </div>
     </nav>
@@ -48,7 +45,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Egoera</label>
-                                <input type="text" name="egoera" id="egoera" placeholder="0= Desaktibatuta; 1=Aktibatuta" class="form-control">
+                                <input type="text" name="egoera" id="egoera" placeholder="Idatzi hemen egoera" class="form-control">
                             </div>
                             <div class="form-group">
                                 <input type="button" value="Aldatu" id="erregistratu" class="btn btn-primary btn-block">

@@ -34,6 +34,7 @@ erregistratu.addEventListener("click", () => {
                 showConfirmButton: false,
                 timer: 1500
             })
+            
             erregistratu.value= "Erregistratu";
             erabkBistaratu();
             id_erab.value= "";
@@ -88,6 +89,7 @@ function erabkAldatu(id_erab){
         console.log("log:"+response.id_erab);
         console.log(response.izena);
 
+        document.getElementById("pass").style.display ="none";
         document.getElementById("id_erab").value = response[0].id_erab;
         document.getElementById("izena").value = response[0].izena;
         document.getElementById("abizena").value = response[0].abizena;

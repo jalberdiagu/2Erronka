@@ -26,9 +26,6 @@
                 <li class="nav-item p-2 flex-fill">
                     <a class="nav-link" href="VAdminP.php">Eskaerak</a>
                 </li>
-                <li class="nav-item p-2 flex-fill">
-                    <a class="nav-link" href="#">Deskontuak</a>
-                </li>
             </ul>
         </div>
     </nav>

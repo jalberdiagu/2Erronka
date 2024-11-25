@@ -26,9 +26,6 @@
                 <li class="nav-item p-2 flex-fill">
                     <a class="nav-link" id="opMenu" href="VAdminP.php">Eskaerak</a>
                 </li>
-                <li class="nav-item p-2 flex-fill">
-                    <a class="nav-link" id="opMenu"href="#">Deskontuak</a>
-                </li>
             </ul>
         </div>
     </nav>
@@ -58,7 +55,7 @@
                                 <label for="">Email</label>
                                 <input type="text" name="email" id="email" placeholder="Idatzi hemen emaila" class="form-control">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id="pass">
                                 <label for="">Pasahitza</label>
                                 <input type="text" name="pasahitza" id="pasahitza" placeholder="Idatzi hemen pasahitza" class="form-control">
                             </div>
